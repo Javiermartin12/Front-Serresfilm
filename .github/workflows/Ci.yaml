@@ -1,6 +1,8 @@
 name: workflow
 on:
   push:
+    tags:
+      - "*"
 
 jobs:
   build:
