@@ -1,9 +1,9 @@
-import NavBar from "@/components/NavBar";
+import { Box } from "@mui/material";
 
 export default function Home() {
   return (
-    <div>
-      <NavBar />
-    </div>
+    <Box
+      sx={{ display: "flex", flexDirection: "column", height: "100vh" }}
+    ></Box>
   );
 }
