@@ -1,10 +1,15 @@
-import styles from "./page.module.css";
+import { AppBar, Toolbar, Button, Typography } from "@mui/material";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}></main>
-      <footer className={styles.footer}></footer>
+    <div>
+      <AppBar position="static">
+        <Toolbar>
+          <Typography variant="h6">Home</Typography>
+          <Button color="inherit">Login</Button>
+        </Toolbar>
+      </AppBar>
+      <h1>Welcome to the Home page!</h1>
     </div>
   );
 }
