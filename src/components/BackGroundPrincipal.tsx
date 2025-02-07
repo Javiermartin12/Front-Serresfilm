@@ -4,14 +4,16 @@ import React from "react";
 function BackGroundPrincipal() {
   return (
     <Box
-      position="relative"
+      component="img"
+      src="src/public/Greenhouse/Greenhouse-1.jpg"
+      alt="invernadero"
       sx={{
-        height: "100vh",
-        width: "100vh",
-        backgroundPosition: "center",
-        backgroundSize: "cover",
+        width: { xs: "100%", sm: "80%", md: "60%" },
+        maxHeight: "400px",
+        objectFit: "cover",
+        height: "60%",
+
         backgroundColor: "rgba(22, 22, 22, 0.5)",
-        transition: "all 1s",
       }}
     />
   );
