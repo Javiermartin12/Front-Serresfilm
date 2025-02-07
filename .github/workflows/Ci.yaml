@@ -1,9 +1,0 @@
-name: workflow
-on:
-  push:
-    tags:
-      - "*"
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
