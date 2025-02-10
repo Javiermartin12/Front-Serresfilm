@@ -41,12 +41,11 @@ function NavBar() {
 
       <AppBar
         sx={{
-          width: { xs: "90%", sm: "80%", md: "80%", lg: "80%", xl: "80%" },
+          width: { xs: "90%", sm: "80%", md: "85%", lg: "85%", xl: "85%" },
           top: "5%",
           left: "50%",
           transform: "translate(-50%, -50%)",
           backgroundColor: "rgba(255, 255, 255, 0.5)",
-          border: "1px solid #ccc",
           borderRadius: 2,
         }}
       >
@@ -72,11 +71,11 @@ function NavBar() {
             variant="h6"
             component={Link}
             href="/"
-            width={1}
             sx={{
               flexGrow: 1,
               textShadow: "1px 5px 10px rgba(0, 0, 0, 0.5)",
               textAlign: "center",
+              marginRight: 4,
               display: {
                 xs: "block",
                 sm: "block",

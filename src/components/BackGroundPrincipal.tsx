@@ -24,16 +24,16 @@ function BackGroundPrincipal() {
         variant="h2"
         sx={{
           position: "absolute",
-          top: { xs: "57%", sm: "25%", md: "22%", lg: "17%", xl: "23%" },
-          left: { xs: "46%", sm: "25%", md: "22%", lg: "17%", xl: "23%" },
+          top: { xs: "40%", sm: "35%", md: "48%", lg: "45%", xl: "23%" },
+          left: { xs: "40%", sm: "40%", md: "40%", lg: "40.3%", xl: "23%" },
           transform: "translate(-50%, -50%)",
           fontWeight: "bold",
           textShadow: "2px 2px 4px rgba(0, 0, 0, 0.7)",
           fontSize: {
-            xs: "2rem", // Tamaño en pantallas pequeñas
-            sm: "3rem", // Tamaño en pantallas medianas
-            md: "4rem", // Tamaño en pantallas grandes
-            lg: "5rem", // Tamaño en pantallas muy grandes
+            xs: "2.1rem",
+            sm: "3rem",
+            md: "3rem",
+            lg: "3rem",
           },
         }}
       >
@@ -46,14 +46,32 @@ function BackGroundPrincipal() {
         endIcon={<SendIcon />}
         sx={{
           position: "absolute",
-          bottom: { xs: "22%", sm: "23%", md: "35%", lg: "35%", xl: "35%" },
-          left: { xs: "27%", sm: "25%", md: "22%", lg: "17%", xl: "23%" },
+          bottom: { xs: "26%", sm: "35%", md: "25%", lg: "30%", xl: "35%" },
+          left: { xs: "34%", sm: "23%", md: "19.3%", lg: "18.3%", xl: "23%" },
           transform: "translate(-50%, -50%)",
         }}
       >
         Invernaderos
       </Button>
-      <Box sx={{}}></Box>
+      <Box
+        sx={{
+          position: "absolute",
+          bottom: {
+            xs: "none",
+            sm: "-10%",
+            md: "-16%",
+            lg: "-15%",
+            xl: "30%",
+          },
+          left: { xs: "none", sm: "73%", md: "78.5%", lg: "78%", xl: "30%" },
+          transform: "translate(-50%, -50%)",
+          height: { xs: "none", sm: "30%", md: "40%", lg: "40%", xl: "40%" },
+          width: { xs: "none", sm: "35%", md: "27%", lg: "26%", xl: "27%" },
+          backgroundColor: "rgba(255, 255, 255, 0.6)",
+          boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.5)",
+          borderRadius: 2,
+        }}
+      ></Box>
     </motion.div>
   );
 }
