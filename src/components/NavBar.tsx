@@ -12,15 +12,6 @@ import Link from "next/link";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
 
-// const navLinks = [
-//   { title: "Home", path: "/" },
-//   { title: "About", path: "/aboutUs" },
-//   { title: "Contact", path: "/contact" },
-//   { title: "Join Us", path: "/joinUs" },
-//   { title: "Greenhouse", path: "/greenhouse" },
-//   { title: "Warehouse", path: "/warehouse" },
-// ];
-
 function NavBar() {
   const [open, setOpen] = useState<boolean>(false);
 
@@ -41,7 +32,6 @@ function NavBar() {
 
       <AppBar
         sx={{
-          width: { xs: "90%", sm: "80%", md: "85%", lg: "85%", xl: "85%" },
           top: "5%",
           left: "50%",
           transform: "translate(-50%, -50%)",
@@ -97,22 +87,22 @@ function NavBar() {
             }}
           >
             <Button component={Link} href="/" color="inherit">
-              Home
+              Inicio
             </Button>
             <Button component={Link} href="/aboutUs" color="inherit">
-              About
-            </Button>
-            <Button component={Link} href="/contact" color="inherit">
-              Contact
+              conocenos
             </Button>
             <Button component={Link} href="/joinUs" color="inherit">
-              Join Us
+              unete a nosotros
             </Button>
             <Button component={Link} href="/greenhouse" color="inherit">
-              Greenhouse
+              invernaderos
             </Button>
             <Button component={Link} href="/warehouse" color="inherit">
-              Warehouse
+              almacenes
+            </Button>
+            <Button component={Link} href="/contact" color="inherit">
+              Contacto
             </Button>
           </Box>
         </Toolbar>
