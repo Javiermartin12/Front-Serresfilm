@@ -53,25 +53,6 @@ function BackGroundPrincipal() {
       >
         Invernaderos
       </Button>
-      <Box
-        sx={{
-          position: "absolute",
-          bottom: {
-            xs: "none",
-            sm: "-10%",
-            md: "-16%",
-            lg: "-15%",
-            xl: "30%",
-          },
-          left: { xs: "none", sm: "73%", md: "78.5%", lg: "78%", xl: "30%" },
-          transform: "translate(-50%, -50%)",
-          height: { xs: "none", sm: "30%", md: "40%", lg: "40%", xl: "40%" },
-          width: { xs: "none", sm: "35%", md: "27%", lg: "26%", xl: "27%" },
-          backgroundColor: "rgba(255, 255, 255, 0.6)",
-          boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.5)",
-          borderRadius: 2,
-        }}
-      ></Box>
     </motion.div>
   );
 }
