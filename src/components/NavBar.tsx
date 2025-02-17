@@ -33,14 +33,11 @@ function NavBar() {
       <AppBar
         sx={{
           top: "5%",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
           position: "absolute",
           left: { xs: "50%", sm: "50%", md: "50%", lg: "70%", xl: "10%" },
           marginTop: "1%",
-          height: { xs: "10%", sm: "10%", md: "10%", lg: "8%", xl: "10%" },
-          width: { xs: "90%", sm: "90%", md: "60%", lg: "55%", xl: "60%" },
+          height: { xs: "8%", sm: "6%", md: "8%", lg: "8%", xl: "10%" },
+          width: { xs: "90%", sm: "90%", md: "60%", lg: "51%", xl: "60%" },
           transform: "translate(-50%, -50%)",
           backgroundColor: "rgba(255, 255, 255, 0.5)",
           borderRadius: 2,
@@ -91,6 +88,8 @@ function NavBar() {
               textShadow: "2px 2px 4px rgba(0, 0, 0, 0.7)",
 
               display: { xs: "none", md: "block" },
+              justifyContent: "space-between",
+              alignItems: "center",
             }}
           >
             <Button component={Link} href="/" color="inherit">
