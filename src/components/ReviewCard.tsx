@@ -1,15 +1,17 @@
 import React from "react";
-import { Box, Typography, Avatar, Rating } from "@mui/material";
+import { Box, Typography, Avatar, Rating, SxProps, Theme } from "@mui/material";
 
 interface ReviewCardProps {
   avatarUrl: string;
   name: string;
+  sx?: SxProps<Theme>;
   rating: number;
   comment: string;
 }
 
 const ReviewCard: React.FC<ReviewCardProps> = ({
   avatarUrl,
+  sx,
   name,
   rating,
   comment,
@@ -31,7 +33,7 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
           xl: "500px",
         },
         width: {
-          xs: "200px",
+          xs: "300px",
           sm: "200px",
           md: "200px",
           lg: "200px",
@@ -39,6 +41,7 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
         },
         textAlign: "center",
         backgroundColor: "#fff",
+        ...sx,
       }}
     >
       {/* Avatar */}
