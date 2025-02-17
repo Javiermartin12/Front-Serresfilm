@@ -33,9 +33,10 @@ function BackGroundPrincipal() {
           textShadow: "2px 2px 4px rgba(0, 0, 0, 0.7)",
           fontSize: {
             xs: "2.1rem",
-            sm: "3rem",
+            sm: "2rem",
             md: "3rem",
             lg: "3rem",
+            xl: "3rem",
           },
         }}
       >
