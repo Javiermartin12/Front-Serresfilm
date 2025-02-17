@@ -8,7 +8,7 @@ function ReviewCarousel() {
 
   const scroll = (direction: "left" | "right") => {
     if (carouselRef.current) {
-      const scrollAmount = 185; // Ajusta la cantidad de desplazamiento
+      const scrollAmount = 252.5; // Ajusta la cantidad de desplazamiento
       carouselRef.current.scrollBy({
         left: direction === "left" ? -scrollAmount : scrollAmount,
         behavior: "smooth",
@@ -20,10 +20,11 @@ function ReviewCarousel() {
     <Box
       sx={{
         position: "relative",
-        width: "50%", // ✅ Ocupa el 50% de la pantalla
-        height: { xs: "34%", sm: "23%", md: "19.3%", lg: "60vh", xl: "23%" }, // ✅ Altura fija
+        width: { xs: "90%", sm: "90%", md: "60%", lg: "60%", xl: "60%" }, // ✅ Ocupa el 50% de la pantalla
+        height: { xs: "100%", sm: "100%", md: "100%", lg: "100%", xl: "100%" }, // ✅ Altura fija
         margin: "0 auto", // ✅ Lo centra horizontalmente
         display: "flex",
+
         justifyContent: "center",
         alignItems: "center",
       }}
@@ -50,8 +51,18 @@ function ReviewCarousel() {
         sx={{
           display: "flex",
           overflowX: "auto",
-          gap: 2,
-          p: 2,
+          width: { xs: "70%", sm: "70%", md: "79%", lg: "70%", xl: "70%" }, // ✅ Ocupa el 50% de la pantalla
+          height: {
+            xs: "100%",
+            sm: "100%",
+            md: "100%",
+            lg: "100%",
+            xl: "100%",
+          },
+          margin: { xs: 2, sm: 2, md: 2, lg: 2, xl: 2 },
+          gap: { xs: "20%", sm: "7.5%", md: "7.8%", lg: "7%", xl: "8%" },
+          paddingLeft: { xs: 2, sm: 4.5, md: 4, lg: 5, xl: 4 },
+          p: 1,
           "&::-webkit-scrollbar": { display: "none" },
           scrollbarWidth: "none", // Soporte para Firefox
         }}
@@ -62,70 +73,62 @@ function ReviewCarousel() {
           name="John Doe"
           rating={4.5}
           comment="Great place to grow my plants, I love it!"
+          sx={{
+            flex: "0 0 210px",
+          }}
         />
 
         {/* ReviewCard */}
         <ReviewCard
-          avatarUrl="/Greenhouse/Avatar-2.jpg"
-          name="Jane Doe"
-          rating={5}
-          comment="The best place to grow my plants, I love it!"
+          avatarUrl="https://randomuser.me/api/portraits/men/1.jpg"
+          name="John Doe"
+          rating={4.5}
+          comment="Great place to grow my plants, I love it!"
+          sx={{ flex: "0 0 210px" }}
         />
 
         {/* ReviewCard */}
         <ReviewCard
-          avatarUrl="/Greenhouse/Avatar-3.jpg"
-          name="Alice Doe"
-          rating={4}
-          comment="I love this place, it's the best!"
+          avatarUrl="https://randomuser.me/api/portraits/men/1.jpg"
+          name="John Doe"
+          rating={4.5}
+          comment="Great place to grow my plants, I love it!"
+          sx={{ flex: "0 0 210px" }}
         />
         <ReviewCard
-          avatarUrl="/Greenhouse/Avatar-3.jpg"
-          name="Alice Doe"
-          rating={4}
-          comment="I love this place, it's the best!"
+          avatarUrl="https://randomuser.me/api/portraits/men/1.jpg"
+          name="John Doe"
+          rating={4.5}
+          comment="Great place to grow my plants, I love it!"
+          sx={{ flex: "0 0 210px" }}
         />
         <ReviewCard
-          avatarUrl="/Greenhouse/Avatar-3.jpg"
-          name="Alice Doe"
-          rating={4}
-          comment="I love this place, it's the best!"
+          avatarUrl="https://randomuser.me/api/portraits/men/1.jpg"
+          name="John Doe"
+          rating={4.5}
+          comment="Great place to grow my plants, I love it!"
+          sx={{ flex: "0 0 210px" }}
         />
         <ReviewCard
-          avatarUrl="/Greenhouse/Avatar-3.jpg"
-          name="Alice Doe"
-          rating={4}
-          comment="I love this place, it's the best!"
+          avatarUrl="https://randomuser.me/api/portraits/men/1.jpg"
+          name="John Doe"
+          rating={4.5}
+          comment="Great place to grow my plants, I love it!"
+          sx={{ flex: "0 0 210px" }}
         />
         <ReviewCard
-          avatarUrl="/Greenhouse/Avatar-3.jpg"
-          name="Alice Doe"
-          rating={4}
-          comment="I love this place, it's the best!"
+          avatarUrl="https://randomuser.me/api/portraits/men/1.jpg"
+          name="John Doe"
+          rating={4.5}
+          comment="Great place to grow my plants, I love it!"
+          sx={{ flex: "0 0 210px" }}
         />
         <ReviewCard
-          avatarUrl="/Greenhouse/Avatar-3.jpg"
-          name="Alice Doe"
-          rating={4}
-          comment="I love this place, it's the best!"
-        />
-        <ReviewCard
-          avatarUrl="/Greenhouse/Avatar-3.jpg"
-          name="Alice Doe"
-          rating={4}
-          comment="I love this place, it's the best!"
-        />
-        <ReviewCard
-          avatarUrl="/Greenhouse/Avatar-3.jpg"
-          name="Alice Doe"
-          rating={4}
-          comment="I love this place, it's the best!"
-        />
-        <ReviewCard
-          avatarUrl="/Greenhouse/Avatar-3.jpg"
-          name="Alice Doe"
-          rating={4}
-          comment="I love this place, it's the best!"
+          avatarUrl="https://randomuser.me/api/portraits/men/1.jpg"
+          name="John Doe"
+          rating={4.5}
+          comment="Great place to grow my plants, I love it!"
+          sx={{ flex: "0 0 210px" }}
         />
       </Box>
 
