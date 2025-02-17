@@ -3,6 +3,7 @@ import React from "react";
 import SendIcon from "@mui/icons-material/Send";
 
 import { motion } from "framer-motion";
+import NavBar from "./NavBar";
 function BackGroundPrincipal() {
   return (
     <motion.div
@@ -10,6 +11,7 @@ function BackGroundPrincipal() {
       animate={{ opacity: 2 }}
       transition={{ duration: 2 }}
     >
+      <NavBar />
       <Box
         component="img"
         src="/Greenhouse/Greenhouse-1.jpg"
