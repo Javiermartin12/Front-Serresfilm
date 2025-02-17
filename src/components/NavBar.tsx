@@ -12,15 +12,6 @@ import Link from "next/link";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
 
-// const navLinks = [
-//   { title: "Home", path: "/" },
-//   { title: "About", path: "/aboutUs" },
-//   { title: "Contact", path: "/contact" },
-//   { title: "Join Us", path: "/joinUs" },
-//   { title: "Greenhouse", path: "/greenhouse" },
-//   { title: "Warehouse", path: "/warehouse" },
-// ];
-
 function NavBar() {
   const [open, setOpen] = useState<boolean>(false);
 
@@ -41,9 +32,12 @@ function NavBar() {
 
       <AppBar
         sx={{
-          width: { xs: "90%", sm: "80%", md: "85%", lg: "85%", xl: "85%" },
           top: "5%",
-          left: "50%",
+          position: "absolute",
+          left: { xs: "50%", sm: "50%", md: "50%", lg: "70%", xl: "10%" },
+          marginTop: "1%",
+          height: { xs: "8%", sm: "6%", md: "8%", lg: "8%", xl: "10%" },
+          width: { xs: "90%", sm: "90%", md: "60%", lg: "51%", xl: "60%" },
           transform: "translate(-50%, -50%)",
           backgroundColor: "rgba(255, 255, 255, 0.5)",
           borderRadius: 2,
@@ -94,25 +88,27 @@ function NavBar() {
               textShadow: "2px 2px 4px rgba(0, 0, 0, 0.7)",
 
               display: { xs: "none", md: "block" },
+              justifyContent: "space-between",
+              alignItems: "center",
             }}
           >
             <Button component={Link} href="/" color="inherit">
-              Home
+              Inicio
             </Button>
             <Button component={Link} href="/aboutUs" color="inherit">
-              About
-            </Button>
-            <Button component={Link} href="/contact" color="inherit">
-              Contact
+              conocenos
             </Button>
             <Button component={Link} href="/joinUs" color="inherit">
-              Join Us
+              unete a nosotros
             </Button>
             <Button component={Link} href="/greenhouse" color="inherit">
-              Greenhouse
+              invernaderos
             </Button>
             <Button component={Link} href="/warehouse" color="inherit">
-              Warehouse
+              almacenes
+            </Button>
+            <Button component={Link} href="/contact" color="inherit">
+              Contacto
             </Button>
           </Box>
         </Toolbar>
