@@ -36,10 +36,11 @@ function NavBar() {
           position: "absolute",
           left: { xs: "50%", sm: "50%", md: "50%", lg: "70%", xl: "10%" },
           marginTop: "1%",
+
           height: { xs: "8%", sm: "6%", md: "8%", lg: "8%", xl: "10%" },
-          width: { xs: "90%", sm: "90%", md: "60%", lg: "51%", xl: "60%" },
+          width: { xs: "90%", sm: "90%", md: "60%", lg: "54%", xl: "60%" },
           transform: "translate(-50%, -50%)",
-          backgroundColor: "rgba(255, 255, 255, 0.5)",
+          backgroundColor: "rgba(55, 55, 55, 0.8)",
           borderRadius: 2,
         }}
       >
@@ -47,7 +48,7 @@ function NavBar() {
           {/* Menú hamburguesa en móviles */}
           <IconButton
             edge="start"
-            color="inherit"
+            color="secondary"
             aria-label="menu"
             sx={{
               display: {
@@ -63,6 +64,7 @@ function NavBar() {
           {/* Título */}
           <Typography
             variant="h6"
+            color="secondary"
             component={Link}
             href="/"
             sx={{
@@ -85,29 +87,88 @@ function NavBar() {
           {/* Barra en escritorio */}
           <Box
             sx={{
-              textShadow: "2px 2px 4px rgba(0, 0, 0, 0.7)",
+              textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
 
-              display: { xs: "none", md: "block" },
-              justifyContent: "space-between",
-              alignItems: "center",
+              display: { xs: "none", md: "flex" },
+              gap: 1,
             }}
           >
-            <Button component={Link} href="/" color="inherit">
+            <Button
+              component={Link}
+              href="/"
+              color="secondary"
+              sx={{
+                "&:hover": {
+                  backgroundColor: "rgba(172, 172, 172, 0.5)",
+                  color: "white",
+                },
+              }}
+            >
               Inicio
             </Button>
-            <Button component={Link} href="/aboutUs" color="inherit">
-              conocenos
+            <Button
+              component={Link}
+              href="/greenhouse"
+              color="secondary"
+              sx={{
+                "&:hover": {
+                  backgroundColor: "rgba(172, 172, 172, 0.5)",
+                  color: "white",
+                },
+              }}
+            >
+              Invernaderos
             </Button>
-            <Button component={Link} href="/joinUs" color="inherit">
-              unete a nosotros
+            <Button
+              component={Link}
+              href="/warehouse"
+              color="secondary"
+              sx={{
+                "&:hover": {
+                  backgroundColor: "rgba(172, 172, 172, 0.5)",
+                  color: "white",
+                },
+              }}
+            >
+              Almacenes
             </Button>
-            <Button component={Link} href="/greenhouse" color="inherit">
-              invernaderos
+            <Button
+              component={Link}
+              href="/aboutUs"
+              color="secondary"
+              sx={{
+                "&:hover": {
+                  backgroundColor: "rgba(172, 172, 172, 0.5)",
+                  color: "white",
+                },
+              }}
+            >
+              Conócenos
             </Button>
-            <Button component={Link} href="/warehouse" color="inherit">
-              almacenes
+            <Button
+              component={Link}
+              href="/joinUs"
+              color="secondary"
+              sx={{
+                "&:hover": {
+                  backgroundColor: "rgba(172, 172, 172, 0.5)",
+                  color: "white",
+                },
+              }}
+            >
+              Únete a nosotros
             </Button>
-            <Button component={Link} href="/contact" color="inherit">
+            <Button
+              component={Link}
+              href="/contact"
+              color="secondary"
+              sx={{
+                "&:hover": {
+                  backgroundColor: "rgba(172, 172, 172, 0.5)",
+                  color: "white",
+                },
+              }}
+            >
               Contacto
             </Button>
           </Box>
