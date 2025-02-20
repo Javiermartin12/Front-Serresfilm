@@ -5,12 +5,12 @@ import {
   Drawer,
   IconButton,
   Toolbar,
-  Typography,
   Box,
 } from "@mui/material";
 import Link from "next/link";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 function NavBar() {
   const [open, setOpen] = useState<boolean>(false);
@@ -31,26 +31,32 @@ function NavBar() {
       {/* Navbar principal */}
 
       <AppBar
+        color="default"
         sx={{
-          top: "5%",
           position: "absolute",
-          left: { xs: "50%", sm: "50%", md: "50%", lg: "70%", xl: "10%" },
-          marginTop: "1%",
-
-          height: { xs: "8%", sm: "6%", md: "8%", lg: "8%", xl: "10%" },
-          width: { xs: "90%", sm: "90%", md: "60%", lg: "54%", xl: "60%" },
-          transform: "translate(-50%, -50%)",
-          backgroundColor: "rgba(55, 55, 55, 0.8)",
-          borderRadius: 2,
+          flexDirection: "row",
+          width: { xs: "100%", md: "100%" },
+          height: { xs: "8%", sm: "11%", md: "7%", lg: "7%", xl: "7%" },
+          borderBottomLeftRadius: 1,
+          borderBottomRightRadius: 1,
         }}
       >
-        <Toolbar sx={{ display: "flex" }}>
+        <Toolbar
+          sx={{
+            display: { xs: "block", md: "none" },
+            width: "50%",
+            alignContent: "center",
+            overflow: "hidden",
+          }}
+        >
           {/* Menú hamburguesa en móviles */}
+
           <IconButton
-            edge="start"
-            color="secondary"
             aria-label="menu"
             sx={{
+              color: "text.primary",
+              overflow: "hidden",
+
               display: {
                 xs: "block",
                 md: "none",
@@ -60,119 +66,136 @@ function NavBar() {
           >
             <MenuIcon />
           </IconButton>
+        </Toolbar>
 
-          {/* Título */}
-          <Typography
-            variant="h6"
-            color="secondary"
+        {/* Logo serresfilm en móviles */}
+        <Box
+          sx={{
+            height: "100%",
+            width: "60%",
+            alignContent: "center",
+          }}
+        >
+          <Box
+            component={motion.img}
+            src="/SerresfilmLogo.png"
+            alt="Serresfilm-Inveraderos"
+            whileHover={{ scale: 1.1 }}
+            initial={{ scale: 0.5, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 1 }}
+            sx={{
+              cursor: "pointer",
+              overflow: "hidden",
+              marginTop: {
+                xs: "3%",
+                sm: "1%",
+                md: "0.5%",
+                lg: "0.5%",
+                xl: "0.5%",
+              },
+              marginLeft: {
+                xs: "0%",
+                sm: "%",
+                md: "3%",
+                lg: "2%",
+                xl: "2%",
+              },
+              width: { xs: "20%", sm: "13%", md: "7%", lg: "5%", xl: "10%" },
+              height: { xs: "70%", sm: "70%", md: "70%", lg: "70%", xl: "70%" },
+            }}
+          />
+        </Box>
+        <Box
+          sx={{
+            display: { xs: "none", md: "flex" },
+            flexDirection: "row",
+            justifyContent: "space-evenly",
+            alignContent: "center",
+            marginRight: "5%",
+            width: { md: "none", lg: "60%", xl: "60%" },
+            height: { md: "none", lg: "100%", xl: "100%" },
+          }}
+        >
+          <Button
             component={Link}
             href="/"
             sx={{
-              flexGrow: 1,
-              textShadow: "1px 5px 10px rgba(0, 0, 0, 0.5)",
-              textAlign: "center",
-              marginRight: 4,
-              display: {
-                xs: "block",
-                sm: "block",
-                md: "none",
-                lg: "none",
-                xl: "none",
+              color: "text.primary",
+              "&:hover": {
+                backgroundColor: "rgba(172, 172, 172, 0.5)",
+                color: "paper",
               },
             }}
           >
-            Serrefilm
-          </Typography>
-
-          {/* Barra en escritorio */}
-          <Box
+            Inicio
+          </Button>
+          <Button
+            component={Link}
+            href="/"
             sx={{
-              textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
-
-              display: { xs: "none", md: "flex" },
-              gap: 1,
+              color: "text.primary",
+              "&:hover": {
+                backgroundColor: "rgba(172, 172, 172, 0.5)",
+                color: "paper",
+              },
             }}
           >
-            <Button
-              component={Link}
-              href="/"
-              color="secondary"
-              sx={{
-                "&:hover": {
-                  backgroundColor: "rgba(172, 172, 172, 0.5)",
-                  color: "white",
-                },
-              }}
-            >
-              Inicio
-            </Button>
-            <Button
-              component={Link}
-              href="/greenhouse"
-              color="secondary"
-              sx={{
-                "&:hover": {
-                  backgroundColor: "rgba(172, 172, 172, 0.5)",
-                  color: "white",
-                },
-              }}
-            >
-              Invernaderos
-            </Button>
-            <Button
-              component={Link}
-              href="/warehouse"
-              color="secondary"
-              sx={{
-                "&:hover": {
-                  backgroundColor: "rgba(172, 172, 172, 0.5)",
-                  color: "white",
-                },
-              }}
-            >
-              Almacenes
-            </Button>
-            <Button
-              component={Link}
-              href="/aboutUs"
-              color="secondary"
-              sx={{
-                "&:hover": {
-                  backgroundColor: "rgba(172, 172, 172, 0.5)",
-                  color: "white",
-                },
-              }}
-            >
-              Conócenos
-            </Button>
-            <Button
-              component={Link}
-              href="/joinUs"
-              color="secondary"
-              sx={{
-                "&:hover": {
-                  backgroundColor: "rgba(172, 172, 172, 0.5)",
-                  color: "white",
-                },
-              }}
-            >
-              Únete a nosotros
-            </Button>
-            <Button
-              component={Link}
-              href="/contact"
-              color="secondary"
-              sx={{
-                "&:hover": {
-                  backgroundColor: "rgba(172, 172, 172, 0.5)",
-                  color: "white",
-                },
-              }}
-            >
-              Contacto
-            </Button>
-          </Box>
-        </Toolbar>
+            Invernaderos
+          </Button>
+          <Button
+            component={Link}
+            href="/"
+            sx={{
+              color: "text.primary",
+              "&:hover": {
+                backgroundColor: "rgba(172, 172, 172, 0.5)",
+                color: "paper",
+              },
+            }}
+          >
+            Almacenes
+          </Button>
+          <Button
+            component={Link}
+            href="/"
+            sx={{
+              color: "text.primary",
+              "&:hover": {
+                backgroundColor: "rgba(172, 172, 172, 0.5)",
+                color: "paper",
+              },
+            }}
+          >
+            Maquinaria
+          </Button>
+          <Button
+            component={Link}
+            href="/"
+            sx={{
+              color: "text.primary",
+              "&:hover": {
+                backgroundColor: "rgba(172, 172, 172, 0.5)",
+                color: "paper",
+              },
+            }}
+          >
+            Conocenos
+          </Button>
+          <Button
+            component={Link}
+            href="/"
+            sx={{
+              color: "text.primary",
+              "&:hover": {
+                backgroundColor: "rgba(172, 172, 172, 0.5)",
+                color: "paper",
+              },
+            }}
+          >
+            Contacto
+          </Button>
+        </Box>
       </AppBar>
 
       {/* Drawer (Menú lateral en móviles) */}
