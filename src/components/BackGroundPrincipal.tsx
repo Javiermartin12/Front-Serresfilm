@@ -1,6 +1,5 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import React from "react";
-import SendIcon from "@mui/icons-material/Send";
 
 import { motion } from "framer-motion";
 import NavBar from "./NavBar";
@@ -11,24 +10,6 @@ function BackGroundPrincipal() {
       animate={{ opacity: 2 }}
       transition={{ duration: 2 }}
     >
-      <Box
-        component={motion.img}
-        src="/SerresfilmLogo.png"
-        alt="Serresfilm-Inveraderos"
-        whileHover={{ scale: 1.1 }}
-        initial={{ scale: 0.5, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 1 }}
-        sx={{
-          position: "absolute",
-          cursor: "pointer",
-          top: "3%",
-          left: "3.5%",
-          width: "4.5%",
-          height: "8%",
-        }}
-      />
-
       <NavBar />
       <Box
         component="img"
@@ -93,20 +74,6 @@ function BackGroundPrincipal() {
       >
         Aumenta tu producción, cultiva tus plantas a otro nivel.
       </Typography>
-      <Button
-        variant="contained"
-        size="large"
-        color="primary"
-        endIcon={<SendIcon />}
-        sx={{
-          position: "absolute",
-          bottom: { xs: "26%", sm: "35%", md: "25%", lg: "30%", xl: "35%" },
-          left: { xs: "34%", sm: "23%", md: "19.3%", lg: "10%", xl: "23%" },
-          transform: "translate(-50%, -50%)",
-        }}
-      >
-        comenzamos
-      </Button>
     </motion.div>
   );
 }
