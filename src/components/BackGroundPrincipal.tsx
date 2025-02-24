@@ -22,24 +22,26 @@ function BackGroundPrincipal() {
         }}
       />
       <Typography
-        variant="h5"
-        component={motion.h5}
+        variant="h2"
+        component={motion.h2}
         initial={{ opacity: 0, x: -200 }}
         animate={{ opacity: 1, x: 10 }}
         transition={{ duration: 1, ease: "backIn" }}
         sx={{
           position: "absolute",
-          top: { xs: "40%", sm: "35%", md: "48%", lg: "33%", xl: "23%" },
-          left: { xs: "40%", sm: "40%", md: "40%", lg: "3%", xl: "23%" },
+          top: { xs: "20%", sm: "35%", md: "25%", lg: "23%", xl: "23%" },
+          left: { xs: "5%", sm: "2%", md: "5%", lg: "3%", xl: "23%" },
+          width: { xs: "70%", sm: "60%", md: "60%", lg: "70%", xl: "60%" },
           transform: "translate(-50%, -50%)",
           fontWeight: "bold",
-          textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)",
+          textShadow: "0px 3px 3px rgba(0, 0, 0, 0.1)",
+          color: "darkgreen",
 
           fontSize: {
-            xs: "2.1rem",
+            xs: "2.5rem",
             sm: "2rem",
-            md: "3rem",
-            lg: "1.7rem",
+            md: "4rem",
+            lg: "4rem",
             xl: "3rem",
           },
         }}
@@ -54,21 +56,19 @@ function BackGroundPrincipal() {
         transition={{ duration: 1, ease: "backIn" }}
         sx={{
           position: "absolute",
-          top: { xs: "40%", sm: "35%", md: "48%", lg: "45%", xl: "23%" },
-          left: { xs: "40%", sm: "40%", md: "40%", lg: "35.5%", xl: "23%" },
+          top: { xs: "45%", sm: "55%", md: "50%", lg: "45%", xl: "23%" },
+          left: { xs: "5%", sm: "2%", md: "5%", lg: "3%", xl: "23%" },
+          width: { xs: "70%", sm: "70%", md: "60%", lg: "70%", xl: "60%" },
           transform: "translate(-50%, -50%)",
+          color: "darkgreen",
           fontWeight: "bold",
-          transition: "transform 0.3s ease-in-out",
-          "&:hover": {
-            transform: "translate(-41%, -50%) scale(1.1)",
-          },
-          textShadow: "2px 2px 4px rgba(0, 0, 0, 0.4)",
+          textShadow: "0px 3px 3px rgba(0, 0, 0, 0.9)",
           fontSize: {
-            xs: "2.1rem",
-            sm: "2rem",
-            md: "3rem",
-            lg: "3rem",
-            xl: "3rem",
+            xs: "1.3rem",
+            sm: "1.3rem",
+            md: "1.5rem",
+            lg: "1.5rem",
+            xl: "1.5rem",
           },
         }}
       >
