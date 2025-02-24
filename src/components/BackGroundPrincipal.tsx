@@ -34,7 +34,7 @@ function BackGroundPrincipal() {
           width: { xs: "70%", sm: "60%", md: "60%", lg: "70%", xl: "60%" },
           transform: "translate(-50%, -50%)",
           fontWeight: "bold",
-          textShadow: "0px 3px 3px rgba(0, 0, 0, 0.1)",
+          textShadow: "0px 3px 3px rgba(0, 0, 0, 0.2)",
           color: "darkgreen",
 
           fontSize: {
@@ -62,7 +62,7 @@ function BackGroundPrincipal() {
           transform: "translate(-50%, -50%)",
           color: "darkgreen",
           fontWeight: "bold",
-          textShadow: "0px 3px 3px rgba(0, 0, 0, 0.9)",
+          textShadow: "0px 3px 3px rgba(0, 0, 0, 0.3)",
           fontSize: {
             xs: "1.3rem",
             sm: "1.3rem",
