@@ -6,7 +6,7 @@ const theme = createTheme({
     primary: {
       light: "#C3E8D5", // Verde claro más suave
       main: "#A8D5BA", // Verde claro principal
-      dark: "#6FA585", // Verde oscuro para contraste
+      dark: "#ebf2fa", // Verde oscuro para contraste
     },
     secondary: {
       light: "#FFE082", // Amarillo más suave

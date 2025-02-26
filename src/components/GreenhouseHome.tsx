@@ -33,20 +33,56 @@ function GreenhouseHome() {
           lg: "100%",
           xl: "100%",
         },
-        textAlign: "center",
+
         backgroundColor: "#fff",
       }}
     >
-      <Box>
-        <Typography variant="h2" color="initial">
-          Invernaderos
+      <Box sx={{ margin: 3 }}>
+        <Typography
+          variant="h5"
+          color="initial"
+          sx={{ fontWeight: "bold", marginBottom: 1 }}
+        >
+          Explora nuestra variedad de invernaderos hechos hasta hoy dia.
         </Typography>
-        <Typography variant="h6" color="initial">
+        <Typography color="initial" sx={{ fontSize: 16, marginBottom: 1 }}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
           iure, laudantium aspernatur est voluptas aut mollitia odit odio vero
-          aliquam nesciunt, accusamus cum. Earum, veritatis itaque non obcaecati
-          libero doloribus?
+          aliquam nesciunt,
         </Typography>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: {
+              xs: "column",
+              sm: "column",
+              md: "row",
+              lg: "row",
+              xl: "row",
+            },
+          }}
+        >
+          <Typography
+            color="initial"
+            sx={{ fontSize: 16, fontWeight: "bold", marginBottom: 1 }}
+          >
+            Diseño duradero y resistente.
+            <Typography color="initial" sx={{ fontSize: 16, marginBottom: 1 }}>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Praesentium iure,
+            </Typography>
+          </Typography>
+          <Typography
+            color="initial"
+            sx={{ fontSize: 16, fontWeight: "bold", marginBottom: 1 }}
+          >
+            Opciones de personalizacion.
+            <Typography color="initial" sx={{ fontSize: 16 }}>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Praesentium iure,
+            </Typography>
+          </Typography>
+        </Box>
       </Box>
       <Box
         component="img"
