@@ -1,4 +1,3 @@
-"use client";
 import { Box, Typography } from "@mui/material";
 import React from "react";
 
@@ -7,91 +6,64 @@ function GreenhouseHome() {
     <Box
       sx={{
         display: "flex",
-        flexDirection: {
-          xs: "column",
-          sm: "column",
-          md: "row",
-          lg: "row",
-          xl: "row",
-        },
-
+        flexDirection: { xs: "column", md: "row" },
         alignItems: "center",
-
-        border: "1px solid black",
-
-        height: {
-          xs: "100vh",
-          sm: "100vh",
-          md: "100vh",
-          lg: "100vh",
-          xl: "100vh",
-        },
-        width: {
-          xs: "100%",
-          sm: "100%",
-          md: "100%",
-          lg: "100%",
-          xl: "100%",
-        },
-
+        minHeight: "100vh", // Cambiado para evitar problemas en pantallas pequeñas
+        width: "100%",
         backgroundColor: "#fff",
+        padding: 2, // Aseguramos que haya un padding consistente
       }}
     >
-      <Box sx={{ margin: 3 }}>
-        <Typography
-          variant="h5"
-          color="initial"
-          sx={{ fontWeight: "bold", marginBottom: 1 }}
-        >
-          Explora nuestra variedad de invernaderos hechos hasta hoy dia.
+      {/* Box for text of greenhouse */}
+      <Box sx={{ margin: 3, maxWidth: "500px" }}>
+        <Typography variant="h5" fontWeight="bold" marginBottom={1}>
+          Explora nuestra variedad de invernaderos hechos hasta hoy día.
         </Typography>
-        <Typography color="initial" sx={{ fontSize: 16, marginBottom: 1 }}>
+
+        <Typography sx={{ fontSize: 16, marginBottom: 2 }}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
           iure, laudantium aspernatur est voluptas aut mollitia odit odio vero
-          aliquam nesciunt,
+          aliquam nesciunt.
         </Typography>
+
         <Box
           sx={{
             display: "flex",
-            flexDirection: {
-              xs: "column",
-              sm: "column",
-              md: "row",
-              lg: "row",
-              xl: "row",
-            },
+            flexDirection: { xs: "column", md: "row" },
+            gap: 2, // Espaciado entre los elementos
           }}
         >
-          <Typography
-            color="initial"
-            sx={{ fontSize: 16, fontWeight: "bold", marginBottom: 1 }}
-          >
-            Diseño duradero y resistente.
-            <Typography color="initial" sx={{ fontSize: 16, marginBottom: 1 }}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Praesentium iure,
+          <Box>
+            <Typography fontWeight="bold" marginBottom={1}>
+              Diseño duradero y resistente.
             </Typography>
-          </Typography>
-          <Typography
-            color="initial"
-            sx={{ fontSize: 16, fontWeight: "bold", marginBottom: 1 }}
-          >
-            Opciones de personalizacion.
-            <Typography color="initial" sx={{ fontSize: 16 }}>
+            <Typography component="div" sx={{ fontSize: 16 }}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Praesentium iure,
+              Praesentium iure.
             </Typography>
-          </Typography>
+          </Box>
+          <Box>
+            <Typography fontWeight="bold" marginBottom={1}>
+              Opciones de personalización.
+            </Typography>
+            <Typography component="div" sx={{ fontSize: 16 }}>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Praesentium iure.
+            </Typography>
+          </Box>
         </Box>
       </Box>
+
+      {/* Box for image of greenhouse */}
       <Box
         component="img"
-        src="/Greenhouse/Greenhouse-1.jpg"
-        alt="invernadero"
+        alt="Invernadero"
         sx={{
           width: { xs: "100%", md: "50%" },
-          height: "100vh",
+          height: "100%",
           objectFit: "cover",
+          backgroundColor: "#f5f5f5",
+          border: "1px solid #e0e0e0",
           py: 2,
         }}
       />
