@@ -2,36 +2,48 @@ import { createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
   palette: {
-    // Colores principales de la marca
     primary: {
-      light: "#C3E8D5", // Verde claro más suave
-      main: "#A8D5BA", // Verde claro principal
-      dark: "#ebf2fa", // Verde oscuro para contraste
+      main: "#A5D6A7", // Verde suave (verde claro y fresco, adecuado para naturaleza)
+      contrastText: "#FFFFFF", // Texto blanco para contraste
     },
     secondary: {
-      light: "#FFE082", // Amarillo más suave
-      main: "#FFD54F", // Amarillo principal
-      dark: "#FFB300", // Amarillo más intenso para resaltar
+      main: "#FFEB8D", // Amarillo suave (tono claro, cálido y alegre)
     },
-
-    // Colores de fondo
     background: {
-      default: "#FAF3E0", // Blanco roto (Fondo principal)
-      paper: "#F5F5F5", // Gris claro (Fondo para tarjetas y secciones)
+      default: "#F5F5F5", // Gris claro (fondo principal neutro)
+      paper: "#FFFFFF", // Blanco para tarjetas y otros componentes
     },
-
-    // Colores de texto
     text: {
-      primary: "#2E7D32", // Verde oscuro (Textos principales, títulos)
-      secondary: "#8D6E63", // Marrón tierra (Subtítulos y detalles)
-      disabled: "#9E9E9E", // Gris medio (Texto desactivado o poco importante)
+      primary: "#333333", // Texto oscuro para legibilidad
+      secondary: "#757575", // Texto secundario más suave (gris medio)
     },
-
-    // Colores funcionales
-    success: { main: "#64B5F6" }, // Azul agronómico (Confianza, éxito)
-    warning: { main: "#FF8F00" }, // Naranja cálido (Llamadas a la acción)
-    error: { main: "#D32F2F" }, // Rojo intenso (Errores y alertas)
-    info: { main: "#4CAF50" }, // Verde medio (Información secundaria, equilibrio)
+    success: {
+      main: "#C8E6C9", // Verde pastel suave (indicativo de éxito)
+    },
+    error: {
+      main: "#FFCCBC", // Rojo suave claro (para errores no intrusivos)
+    },
+    warning: {
+      main: "#FFF59D", // Amarillo suave (para advertencias más ligeras)
+    },
+  },
+  typography: {
+    fontFamily: '"Poppins", sans-serif', // Fuente limpia y moderna
+    h1: {
+      fontWeight: 700,
+      fontSize: "3rem",
+      color: "#4CAF50", // Verde para encabezados principales
+    },
+    h2: {
+      fontWeight: 600,
+      fontSize: "2.5rem",
+      color: "#FFEB8D", // Amarillo suave para subencabezados
+    },
+    body1: {
+      fontSize: "1rem",
+      lineHeight: 1.6,
+      color: "#333333", // Texto principal oscuro
+    },
   },
 });
 
