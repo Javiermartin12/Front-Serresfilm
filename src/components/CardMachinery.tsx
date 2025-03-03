@@ -21,14 +21,14 @@ const CardMachinery: React.FC<CardMachineryProps> = ({
         alignItems: "center",
         border: "1px solid #e0e0e0",
         borderRadius: "8px",
-        overflow: "hidden",
         boxShadow: 3,
         maxWidth: "100%",
+        maxHeight: "100%",
       }}
     >
       <Box
         component="img"
-        src={imageUrl}
+        src={image}
         alt={title}
         style={{ width: "100%", height: "auto" }}
       />
