@@ -17,6 +17,7 @@ function BackGroundPrincipal() {
         alt="invernadero"
         sx={{
           width: "100%",
+          filter: "brightness(0.9)",
           height: "100vh",
           objectFit: "cover",
         }}
@@ -25,8 +26,8 @@ function BackGroundPrincipal() {
         variant="h2"
         component={motion.h2}
         initial={{ opacity: 0, x: -200 }}
-        animate={{ opacity: 1, x: 10 }}
-        transition={{ duration: 1, ease: "backIn" }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1, ease: "easeInOut" }}
         sx={{
           position: "absolute",
           top: { xs: "20%", sm: "35%", md: "25%", lg: "23%", xl: "23%" },
@@ -34,7 +35,7 @@ function BackGroundPrincipal() {
           width: { xs: "70%", sm: "60%", md: "60%", lg: "70%", xl: "60%" },
           transform: "translate(-50%, -50%)",
           fontWeight: "bold",
-          textShadow: "0px 3px 3px rgba(0, 0, 0, 0.2)",
+          textShadow: "0px 2px 2px rgba(0, 0, 0, 0.7)",
           color: "darkgreen",
 
           fontSize: {
@@ -52,8 +53,8 @@ function BackGroundPrincipal() {
         variant="h2"
         component={motion.h2}
         initial={{ opacity: 0, x: -200 }}
-        animate={{ opacity: 1, x: 10 }}
-        transition={{ duration: 1, ease: "backIn" }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1, ease: "easeInOut" }}
         sx={{
           position: "absolute",
           top: { xs: "45%", sm: "55%", md: "50%", lg: "45%", xl: "23%" },
@@ -62,7 +63,7 @@ function BackGroundPrincipal() {
           transform: "translate(-50%, -50%)",
           color: "darkgreen",
           fontWeight: "bold",
-          textShadow: "0px 3px 3px rgba(0, 0, 0, 0.3)",
+          textShadow: "0px 1.5px 1.5px rgba(0, 0, 0, 0.7)",
           fontSize: {
             xs: "1.3rem",
             sm: "1.3rem",
