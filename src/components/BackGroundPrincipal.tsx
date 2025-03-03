@@ -17,7 +17,7 @@ function BackGroundPrincipal() {
         alt="invernadero"
         sx={{
           width: "100%",
-          filter: "brightness(0.9)",
+          filter: "brightness(0.9)", //Sombreado interior
           height: "100vh",
           objectFit: "cover",
         }}
