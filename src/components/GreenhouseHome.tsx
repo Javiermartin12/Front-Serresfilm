@@ -8,6 +8,7 @@ function GreenhouseHome() {
         display: "flex",
         flexDirection: { xs: "column", md: "row" },
         alignItems: "center",
+
         minHeight: "100vh", // Cambiado para evitar problemas en pantallas pequeñas
         width: "100%",
         backgroundColor: "#fff",
@@ -15,7 +16,7 @@ function GreenhouseHome() {
       }}
     >
       {/* Box for text of greenhouse */}
-      <Box sx={{ margin: 3, maxWidth: "500px" }}>
+      <Box sx={{ margin: 3, maxWidth: "100px", minWidth: "600px" }}>
         <Typography variant="h5" fontWeight="bold" marginBottom={1}>
           Explora nuestra variedad de invernaderos hechos hasta hoy día.
         </Typography>

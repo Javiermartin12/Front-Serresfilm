@@ -21,6 +21,7 @@ function WarehouseHome() {
         sx={{
           width: { xs: "100%", md: "50%" },
           height: "100%",
+          marginLeft: { xs: 0, md: 3 },
           objectFit: "cover",
           backgroundColor: "#f5f5f5",
           border: "1px solid #e0e0e0",
@@ -30,7 +31,7 @@ function WarehouseHome() {
       />
 
       {/* Text Box */}
-      <Box sx={{ margin: 3, maxWidth: "600px" }}>
+      <Box sx={{ margin: 3, maxWidth: "100px", minWidth: "600px" }}>
         <Typography variant="h5" fontWeight="bold" marginBottom={1}>
           Explora nuestra variedad de invernaderos hechos hasta hoy día.
         </Typography>
