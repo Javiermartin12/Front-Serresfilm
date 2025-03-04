@@ -13,11 +13,11 @@ function BackGroundPrincipal() {
       <NavBar />
       <Box
         component="img"
-        src="/Greenhouse/Greenhouse-1.jpg"
+        src="https://res.cloudinary.com/dd5zkfvbo/image/upload/v1741107306/Greenhouse-1_atu5vj.jpg"
         alt="invernadero"
         sx={{
           width: "100%",
-          filter: "brightness(0.9)",
+          filter: "brightness(0.9)", //Sombreado interior
           height: "100vh",
           objectFit: "cover",
         }}

@@ -15,7 +15,7 @@ function GreenhouseHome() {
       }}
     >
       {/* Box for text of greenhouse */}
-      <Box sx={{ margin: 3, maxWidth: "500px" }}>
+      <Box sx={{ margin: 3, maxWidth: "100px", minWidth: "600px" }}>
         <Typography variant="h5" fontWeight="bold" marginBottom={1}>
           Explora nuestra variedad de invernaderos hechos hasta hoy día.
         </Typography>
@@ -57,6 +57,7 @@ function GreenhouseHome() {
       {/* Box for image of greenhouse */}
       <Box
         component="img"
+        src="https://res.cloudinary.com/dd5zkfvbo/image/upload/t_My Logo/v1741106540/839b26ef-4c77-439f-864c-da66143c6086_jtyjsp.jpg"
         alt="Invernadero"
         sx={{
           width: { xs: "100%", md: "50%" },
