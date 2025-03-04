@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const Logo = () => (
   <Box
     component={motion.img}
-    src="/SerresfilmLogo.png"
+    src="https://res.cloudinary.com/dd5zkfvbo/image/upload/v1741106016/My%20Brand/WhatsApp_Image_2025-02-18_at_16.20.49-removebg-preview_quwlfq.png"
     alt="Serresfilm-Invernaderos"
     whileHover={{ scale: 1.1 }}
     initial={{ scale: 0.5, opacity: 0 }}
