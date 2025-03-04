@@ -1,5 +1,5 @@
 import { Box, IconButton, Typography, useTheme } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import CardMachinery from "./CardMachinery";
 import { ArrowBack, ArrowForward } from "@mui/icons-material";
 
@@ -28,19 +28,19 @@ const machinery = [
 
 function MachineryHome() {
   const theme = useTheme();
-  // const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  // const nextSlide = () => {
-  //   setCurrentIndex((prevIndex) =>
-  //     prevIndex === machinery.length - 1 ? 0 : prevIndex + 1
-  //   );
-  // };
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === machinery.length - 1 ? 0 : prevIndex + 1
+    );
+  };
 
-  // const prevSlide = () => {
-  //   setCurrentIndex((prevIndex) =>
-  //     prevIndex === 0 ? machinery.length - 1 : prevIndex - 1
-  //   );
-  // };
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? machinery.length - 1 : prevIndex - 1
+    );
+  };
   return (
     <>
       <Box
@@ -93,6 +93,7 @@ function MachineryHome() {
         >
           {/* Botón Izquierda */}
           <IconButton
+            onClick={prevSlide}
             sx={{
               position: "absolute", // 🔹 Cambio a position absolute
               top: "90%",
@@ -108,13 +109,17 @@ function MachineryHome() {
           {/* Tarjetas de maquinaria */}
           <Box
             sx={{
-              width: "100%",
+              transition: "transform 0.5s ease-in-out",
+              transform: `translateX(-${currentIndex * 50}%)`,
+              overflow: "hidden",
+
+              width: `${machinery.length * 100}%`,
               display: "flex",
               gap: {
                 xs: "20%",
                 sm: "30%",
                 md: "30%",
-                lg: "25%",
+                lg: "5%",
                 xl: "50%",
               },
               padding: theme.spacing(2),
@@ -126,7 +131,7 @@ function MachineryHome() {
                 sx={{
                   overflow: "hidden",
                   position: "relative",
-                  top: { xs: "0", sm: "0", md: "0", lg: "10%", xl: "0" }, // Desplaza el componente 20px hacia abajo
+                  top: { xs: "0", sm: "0", md: "0", lg: "10%", xl: "0" },
                   left: {
                     xs: "10%",
                     sm: "23%",
@@ -168,6 +173,7 @@ function MachineryHome() {
             ))}
             {/* Botón Derecha */}
             <IconButton
+              onClick={nextSlide}
               sx={{
                 position: "absolute",
                 right: { xs: "10%", sm: "0", md: "0", lg: "10%", xl: "0" },
