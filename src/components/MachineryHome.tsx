@@ -5,22 +5,26 @@ import { ArrowBack, ArrowForward } from "@mui/icons-material";
 
 const machinery = [
   {
-    image: "/images/machine1.jpg",
+    image:
+      "https://res.cloudinary.com/dd5zkfvbo/image/upload/t_My Logo/v1741105833/carroestandar_lesal9.jpg",
     title: "Maquinaria 1",
     description: "Descripción de la maquinaria 1",
   },
   {
-    image: "/images/machine2.jpg",
+    image:
+      "https://res.cloudinary.com/dd5zkfvbo/image/upload/t_My Logo/v1741105833/volquete_dfemvj.jpg",
     title: "Maquinaria 2",
     description: "Descripción de la maquinaria 2",
   },
   {
-    image: "/images/machine3.jpg",
+    image:
+      "https://res.cloudinary.com/dd5zkfvbo/image/upload/t_My Logo/v1741105834/carrosilla_kvy7wj.jpg",
     title: "Maquinaria 3",
     description: "Descripción de la maquinaria 3",
   },
   {
-    image: "/images/machine4.jpg",
+    image:
+      "https://res.cloudinary.com/dd5zkfvbo/image/upload/t_My Logo/v1741105833/carrosandias_fzymkg.jpg",
     title: "Maquinaria 4",
     description: "Descripción de la maquinaria 4",
   },
