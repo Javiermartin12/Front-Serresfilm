@@ -1,7 +1,8 @@
 import { Box, IconButton } from "@mui/material";
 import React, { useRef } from "react";
-import ReviewCard from "./ReviewCard";
+
 import { ArrowBack, ArrowForward } from "@mui/icons-material";
+import ReviewCard from "../ReviewCard";
 
 function ReviewCarousel() {
   const carouselRef = useRef<HTMLDivElement | null>(null);

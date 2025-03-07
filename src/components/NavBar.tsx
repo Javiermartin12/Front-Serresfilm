@@ -23,11 +23,9 @@ import {
 const navLinks = [
   { label: "Inicio", href: "/", icon: <Home /> },
   { label: "Invernaderos", href: "/greenHouse", icon: <Storefront /> },
-
   { label: "Almacenes", href: "/wareHouse", icon: <Warehouse /> },
   { label: "Maquinaria", href: "/machinery", icon: <Storefront /> },
   { label: "Conócenos", href: "/about", icon: <Info /> },
-  { label: "Unete", href: "/joinUs", icon: <Storefront /> },
   { label: "Contacto", href: "/contact", icon: <ContactMail /> },
 ];
 

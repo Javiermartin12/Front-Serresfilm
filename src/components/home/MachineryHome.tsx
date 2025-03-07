@@ -1,7 +1,7 @@
 import { Box, IconButton, Typography, useTheme } from "@mui/material";
 import React, { useState } from "react";
-import CardMachinery from "./CardMachinery";
 import { ArrowBack, ArrowForward } from "@mui/icons-material";
+import CardMachinery from "../CardMachinery";
 
 const machinery = [
   {
