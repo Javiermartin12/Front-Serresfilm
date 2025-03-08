@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import React from "react";
-const porducts = [
+const products = [
   {
     image:
       "https://res.cloudinary.com/dd5zkfvbo/image/upload/t_My Logo/v1741105833/carroestandar_lesal9.jpg",
@@ -73,7 +73,11 @@ function Products() {
           display: "flex",
           flexFlow: "wrap",
         }}
-      ></Box>
+      >
+        {products.map((product, index) => (
+          <Box key={index}></Box>
+        ))}
+      </Box>
     </Box>
   );
 }
