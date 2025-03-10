@@ -2,8 +2,8 @@ import { Box, Typography } from "@mui/material";
 import React from "react";
 
 import { motion } from "framer-motion";
-import NavBar from "./NavBar";
-function BackGroundPrincipal() {
+import NavBar from "../NavBar";
+function HeaderHome() {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -79,4 +79,4 @@ function BackGroundPrincipal() {
   );
 }
 
-export default BackGroundPrincipal;
+export default HeaderHome;
