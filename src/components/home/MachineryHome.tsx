@@ -45,155 +45,112 @@ function MachineryHome() {
       prevIndex === 0 ? machinery.length - 1 : prevIndex - 1
     );
   };
+
   return (
-    <>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        minHeight: "100vh",
+        justifyContent: "center",
+        border: "1px solid #e0e0e0",
+        width: "100%",
+        backgroundColor: "#fff",
+        padding: theme.spacing(2),
+      }}
+    >
+      {/* Encabezado */}
       <Box
         sx={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          minHeight: "100vh",
-          justifyContent: "center",
-          border: "1px solid #e0e0e0",
-          width: "100%",
-          backgroundColor: "#fff",
-          padding: theme.spacing(2),
+          textAlign: "center",
+          paddingBottom: theme.spacing(4),
+          maxWidth: "800px",
         }}
       >
-        <Box
-          sx={{
-            border: "1px solid #e0e0e0",
-            width: "100%",
-            minHeight: "30vh",
-            display: "flex",
-            flexDirection: "column",
-            gap: 2,
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <Typography variant="h6" component="h2" fontWeight="bold">
-            Innovación
-          </Typography>
-          <Typography variant="h2" component="h1" fontWeight="bold">
-            Explora nuestro rango de maquinaria
-          </Typography>
-          <Typography>
-            Toda la maquinaria que ves a continuación es fabricada por nosotros.
-          </Typography>
-        </Box>
-        {/* Box for image of machinery */}
-        <Box
-          sx={{
-            border: "1px solid #e0e0e0",
-            width: "100%",
-            overflow: "hidden",
-            display: "flex",
-            flexDirection: "row",
-            position: "relative",
-            gap: theme.spacing(2),
-            minHeight: "70vh",
-          }}
-        >
-          {/* Botón Izquierda */}
-          <IconButton
-            onClick={prevSlide}
-            sx={{
-              position: "absolute", // 🔹 Cambio a position absolute
-              top: "90%",
-              left: { xs: "10%", sm: "0", md: "0", lg: "10%", xl: "0" },
-              transform: "translateY(-50%)",
-              backgroundColor: "white",
-              boxShadow: 2,
-              zIndex: 2,
-            }}
-          >
-            <ArrowBack />
-          </IconButton>
-          {/* Tarjetas de maquinaria */}
-          <Box
-            sx={{
-              transition: "transform 0.5s ease-in-out",
-              transform: `translateX(-${currentIndex * 50}%)`,
-              overflow: "hidden",
+        <Typography variant="h6" fontWeight="bold">
+          Innovación
+        </Typography>
+        <Typography variant="h3" fontWeight="bold">
+          Explora nuestro rango de maquinaria
+        </Typography>
+        <Typography>
+          Toda la maquinaria que ves a continuación es fabricada por nosotros.
+        </Typography>
+      </Box>
 
-              width: `${machinery.length * 100}%`,
-              display: "flex",
-              gap: {
-                xs: "20%",
-                sm: "30%",
-                md: "30%",
-                lg: "5%",
-                xl: "50%",
-              },
-              padding: theme.spacing(2),
-            }}
-          >
-            {machinery.map((item) => (
-              <Box
-                key={item.image}
-                sx={{
-                  overflow: "hidden",
-                  position: "relative",
-                  top: { xs: "0", sm: "0", md: "0", lg: "10%", xl: "0" },
-                  left: {
-                    xs: "10%",
-                    sm: "23%",
-                    md: "15%",
-                    lg: "20%",
-                    xl: "10%",
-                  },
-                  transform: "translate(110, 0)",
-                  border: "1px solid #e0e0e0",
-                  minWidth: {
-                    xs: "80%",
-                    sm: "59%",
-                    md: "70%",
-                    lg: "60%",
-                    xl: "70%",
-                  },
-                  maxHeight: {
-                    xs: "80%",
-                    sm: "80%",
-                    md: "80%",
-                    lg: "70%",
-                    xl: "70%",
-                  },
-                  minHeight: {
-                    xs: "20%",
-                    sm: "0%",
-                    md: "80%",
-                    lg: "70%",
-                    xl: "70%",
-                  },
-                }}
-              >
-                <CardMachinery
-                  image={item.image}
-                  title={item.title}
-                  description={item.description}
-                />
-              </Box>
-            ))}
-            {/* Botón Derecha */}
-            <IconButton
-              onClick={nextSlide}
+      {/* Carrusel */}
+      <Box
+        sx={{
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          position: "relative",
+          overflow: "hidden",
+          minHeight: "60vh",
+        }}
+      >
+        {/* Botón Izquierda */}
+        <IconButton
+          onClick={prevSlide}
+          sx={{
+            position: "absolute",
+            left: "2%",
+            backgroundColor: "white",
+            boxShadow: 2,
+            zIndex: 2,
+            "&:hover": { backgroundColor: "#f0f0f0" },
+          }}
+        >
+          <ArrowBack />
+        </IconButton>
+
+        {/* Contenedor de tarjetas */}
+        <Box
+          sx={{
+            display: "flex",
+            transition: "transform 0.5s ease-in-out",
+            transform: `translateX(-${currentIndex * 100}%)`,
+            width: `${machinery.length * 100}%`,
+          }}
+        >
+          {machinery.map((item, index) => (
+            <Box
+              key={index}
               sx={{
-                position: "absolute",
-                right: { xs: "10%", sm: "0", md: "0", lg: "10%", xl: "0" },
-                top: "90%",
-                transform: "translateY(-50%)",
-                zIndex: 2,
-                backgroundColor: "white",
-                boxShadow: 2,
+                flex: "0 0 100%",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                padding: theme.spacing(2),
               }}
             >
-              <ArrowForward />
-            </IconButton>
-          </Box>
+              <CardMachinery
+                image={item.image}
+                title={item.title}
+                description={item.description}
+              />
+            </Box>
+          ))}
         </Box>
+
+        {/* Botón Derecha */}
+        <IconButton
+          onClick={nextSlide}
+          sx={{
+            position: "absolute",
+            right: "2%",
+            backgroundColor: "white",
+            boxShadow: 2,
+            zIndex: 2,
+            "&:hover": { backgroundColor: "#f0f0f0" },
+          }}
+        >
+          <ArrowForward />
+        </IconButton>
       </Box>
-    </>
+    </Box>
   );
 }
 
