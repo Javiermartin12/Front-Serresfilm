@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import React from "react";
 const products = [
   {
@@ -63,8 +63,16 @@ function Products() {
           border: "1px solid black",
           display: "flex",
           flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
         }}
-      ></Box>
+      >
+        {" "}
+        <Typography variant="h2" color="initial">
+          {" "}
+          Productos
+        </Typography>
+      </Box>
       <Box
         sx={{
           height: "80%",
