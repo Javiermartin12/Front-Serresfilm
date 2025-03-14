@@ -1,16 +1,18 @@
 "use client";
+
 import {
   AppBar,
   Button,
   Drawer,
   IconButton,
-  Toolbar,
   Box,
   Typography,
+  Divider,
+  Toolbar,
 } from "@mui/material";
 import Link from "next/link";
 import MenuIcon from "@mui/icons-material/Menu";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Logo from "./Logo";
 import {
   ContactMail,
@@ -30,124 +32,157 @@ const navLinks = [
 ];
 
 function NavBar() {
-  const [open, setOpen] = useState<boolean>(false);
+  const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const handleDrawerToggle = (state: boolean) => () => setOpen(state);
+
+  // Efecto para cambiar el navbar cuando se hace scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <>
       {/* Navbar principal */}
-
       <AppBar
-        color="default"
+        color="transparent"
+        elevation={scrolled ? 4 : 0} // Sombra cuando hay scroll
         sx={{
-          position: "absolute",
-          flexDirection: "row",
+          position: "fixed",
+          top: 0,
+          left: 0,
           width: "100%",
-          height: { xs: "8%", sm: "11%", md: "7%", lg: "7%", xl: "7%" },
+          transition:
+            "background-color 0.3s ease-in-out, transform 0.3s ease-in-out",
+          backgroundColor: scrolled
+            ? "rgba(255, 255, 255, 0.8)"
+            : "transparent",
+          backdropFilter: scrolled ? "blur(10px)" : "none",
+          transform: scrolled ? "translateY(0)" : "translateY(-10px)",
+          height: "70px",
+          display: "flex",
+          justifyContent: "center",
         }}
       >
         <Toolbar
           sx={{
-            display: { xs: "block", md: "none" },
-            width: "50%",
-            alignContent: "center",
-            overflow: "hidden",
+            width: "100%",
+            maxWidth: "1200px",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            px: 2,
           }}
         >
           {/* Menú hamburguesa en móviles */}
-
           <IconButton
             aria-label="menu"
             sx={{
+              display: { xs: "block", md: "none" },
               color: "text.primary",
-              overflow: "hidden",
-
-              display: {
-                xs: "block",
-                md: "none",
-              },
+              p: 1.5,
             }}
             onClick={handleDrawerToggle(true)}
           >
-            <MenuIcon />
+            <MenuIcon fontSize="large" />
           </IconButton>
-        </Toolbar>
 
-        {/* Logo serresfilm en móviles */}
-        <Box
-          sx={{
-            height: "100%",
-            width: "60%",
-            alignContent: "center",
-          }}
-        >
-          <Box sx={{ height: "100%", width: "60%", alignContent: "center" }}>
+          {/* Logo */}
+          <Box
+            sx={{
+              height: "50px",
+              display: "flex",
+              alignItems: "center",
+              overflow: "hidden",
+            }}
+          >
             <Logo />
           </Box>
-        </Box>
-        <Box
-          sx={{
-            display: { xs: "none", md: "flex" },
-            flexDirection: "row",
-            justifyContent: "space-evenly",
-            alignContent: "center",
-            marginRight: "5%",
-            width: { md: "none", lg: "60%", xl: "60%" },
-            height: { md: "none", lg: "100%", xl: "100%" },
-          }}
-        >
-          {navLinks.map((link, index) => (
-            <Button
-              key={`${link.href}-${index}`}
-              component={Link}
-              href={link.href}
-              sx={{
-                color: "text.primary",
-                "&:hover": { backgroundColor: "rgba(172, 172, 172, 0.5)" },
-              }}
-            >
-              {link.label}
-            </Button>
-          ))}
-        </Box>
+
+          {/* Navegación en escritorio */}
+          <Box
+            sx={{
+              display: { xs: "none", md: "flex" },
+              gap: 3,
+              pr: 4,
+            }}
+          >
+            {navLinks.map((link, index) => (
+              <Button
+                key={`${link.href}-${index}`}
+                component={Link}
+                href={link.href}
+                sx={{
+                  color: "text.primary",
+                  textTransform: "none",
+                  fontWeight: "bold",
+                  fontSize: "1rem",
+                  transition: "color 0.3s ease-in-out",
+                  "&:hover": { color: "primary.main" },
+                }}
+              >
+                {link.label}
+              </Button>
+            ))}
+          </Box>
+        </Toolbar>
       </AppBar>
-      {/* Drawer (Menú lateral en móviles) */}
+
+      {/* Menú lateral (Drawer) */}
       <Drawer
         anchor="left"
-        PaperProps={{
-          sx: {
-            width: 250,
-            backgroundColor: "#f4f4f4",
-            transition: "transform 0.9s easeInOut",
-          },
-        }}
         open={open}
         onClose={handleDrawerToggle(false)}
+        PaperProps={{
+          sx: {
+            width: 270,
+            backgroundColor: "#f9f9f9",
+            boxShadow: 3,
+          },
+        }}
       >
         <Box
           sx={{
             display: "flex",
             flexDirection: "column",
-            padding: 3,
-            gap: 2,
-            marginTop: 4,
+            padding: 2,
+            height: "100%",
           }}
         >
+          {/* Logo en el menú */}
+          <Box sx={{ display: "flex", justifyContent: "center", mb: 2 }}>
+            <Logo />
+          </Box>
+
+          <Divider />
+
+          {/* Enlaces */}
           {navLinks.map((link, index) => (
             <Button
-              key={`${link.href}-drawer-${index}`} // Clave única con sufijo
+              key={`${link.href}-drawer-${index}`}
               component={Link}
               href={link.href}
               color="inherit"
               sx={{
                 display: "flex",
+                justifyContent: "flex-start",
                 alignItems: "center",
-                "&:hover": { backgroundColor: "rgba(172, 172, 172, 0.2)" },
+                px: 2,
+                py: 1.5,
+                textTransform: "none",
+                fontSize: "1rem",
+                "&:hover": { backgroundColor: "rgba(172, 172, 172, 0.1)" },
               }}
+              onClick={handleDrawerToggle(false)}
             >
               {link.icon}
-              <Typography sx={{ marginLeft: 1 }}>{link.label}</Typography>
+              <Typography sx={{ ml: 1 }}>{link.label}</Typography>
             </Button>
           ))}
         </Box>
