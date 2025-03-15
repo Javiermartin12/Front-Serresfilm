@@ -1,11 +1,16 @@
 import Footer from "@/components/Footer";
+import CompanyValues from "@/components/MeetUs/CompanyValues";
+import WeInformation from "@/components/MeetUs/OurHistory";
+
 import NavBar from "@/components/NavBar";
 
 function about() {
   return (
     <div>
       <NavBar />
-      <h1>Acerca de nosotros</h1>
+
+      <WeInformation />
+      <CompanyValues />
       <Footer />
     </div>
   );
