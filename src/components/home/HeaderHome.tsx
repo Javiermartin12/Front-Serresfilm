@@ -36,7 +36,7 @@ function HeaderHome() {
             width: "100%",
             height: "100%",
             objectFit: "cover",
-            filter: "brightness(0.9)", // Sombreado interior
+            filter: "brightness(0.9)",
           }}
         />
 
