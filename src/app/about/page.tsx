@@ -1,6 +1,9 @@
 import Footer from "@/components/Footer";
 import CompanyValues from "@/components/MeetUs/CompanyValues";
-import WeInformation from "@/components/MeetUs/OurHistory";
+import ImagesComponent from "@/components/MeetUs/ImagesComponent";
+import JoinUs from "@/components/MeetUs/JoinUs";
+import OurHistory from "@/components/MeetUs/OurHistory";
+import OurTeam from "@/components/MeetUs/OurTeam";
 
 import NavBar from "@/components/NavBar";
 
@@ -8,9 +11,11 @@ function about() {
   return (
     <div>
       <NavBar />
-
-      <WeInformation />
+      <OurHistory />
       <CompanyValues />
+      <ImagesComponent />
+      <OurTeam />
+      <JoinUs />
       <Footer />
     </div>
   );
