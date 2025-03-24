@@ -74,12 +74,14 @@ const DataContact = () => {
                 sx={{
                   fontSize: 15,
                   textDecoration: "none",
-                  color: "inherit",
                 }}
               >
                 +34 633 615 900
               </Link>
-              <Link href="tel:+34649961062" sx={{ fontSize: 15 }}>
+              <Link
+                href="tel:+34649961062"
+                sx={{ fontSize: 15, textDecoration: "none" }}
+              >
                 +34 649 961 062
               </Link>
             </>
@@ -92,7 +94,6 @@ const DataContact = () => {
               sx={{
                 fontSize: 15,
                 textDecoration: "none",
-                color: "inherit",
               }}
             >
               {data.address}
