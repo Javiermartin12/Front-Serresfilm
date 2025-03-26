@@ -1,11 +1,11 @@
 "use client";
 
 import Footer from "@/components/Footer";
-import GreenhouseHome from "@/components/home/GreenhouseHome";
-import HeaderHome from "@/components/home/HeaderHome";
-import MachineryHome from "@/components/home/MachineryHome";
-import ReviewCarousel from "@/components/home/ReviewCarousel";
-import WarehouseHome from "@/components/home/WarehouseHome";
+import GreenhouseHome from "@/components/Home/GreenhouseHome";
+import HeaderHome from "@/components/Home/HeaderHome";
+import MachineryHome from "@/components/Home/MachineryHome";
+import ReviewCarousel from "@/components/Home/ReviewCarousel";
+import WarehouseHome from "@/components/Home/WarehouseHome";
 
 export default function Home() {
   return (
