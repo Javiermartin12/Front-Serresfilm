@@ -10,7 +10,6 @@ export default function ContactPage() {
       <DataContact />
       <ScreemshotPlace />
 
-      <p>Puedes contactarnos en este formulario.</p>
       <Footer />
     </div>
   );
