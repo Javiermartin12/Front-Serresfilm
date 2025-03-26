@@ -1,3 +1,4 @@
+"use client";
 import Footer from "@/components/Footer";
 import BenefitsGreenhouse from "@/components/greenHouse/BenefitsGreenhouse";
 import GetGreenhouse from "@/components/greenHouse/GetGreenhouse";

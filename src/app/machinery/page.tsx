@@ -1,3 +1,4 @@
+"use client";
 import Footer from "@/components/Footer";
 import { CallToAction } from "@/components/Machinery/CallToAction";
 import InformationMachinery from "@/components/Machinery/InformationMachinery";

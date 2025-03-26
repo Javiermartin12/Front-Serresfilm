@@ -1,3 +1,4 @@
+"use client";
 import DataContact from "@/components/Contact/DataContact";
 import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
