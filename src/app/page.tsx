@@ -1,6 +1,6 @@
 "use client";
 
-import BackGroundPrincipal from "@/components/Home/HeaderHome";
+import HeaderHome from "@/components/Home/HeaderHome";
 import Footer from "@/components/Footer";
 import GreenhouseHome from "@/components/Home/GreenhouseHome";
 
@@ -11,7 +11,7 @@ import MachineryHome from "@/components/Home/MachineryHome";
 export default function Home() {
   return (
     <>
-      <BackGroundPrincipal />
+      <HeaderHome />
       <GreenhouseHome />
       <ReviewCarousel />
       <WarehouseHome />

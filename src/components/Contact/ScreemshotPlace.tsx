@@ -22,7 +22,6 @@ const ScreemshotPlace = () => {
       </Box>
       <Box
         sx={{
-          border: "1px solid #000",
           padding: "20px",
           display: "flex",
           justifyContent: "center",
