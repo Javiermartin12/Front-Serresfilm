@@ -1,9 +1,12 @@
+"use client";
 import Footer from "@/components/Footer";
-import BenefitsGreenhouse from "@/components/greenHouse/BenefitsGreenhouse";
-import GetGreenhouse from "@/components/greenHouse/GetGreenhouse";
-import GreenHouseHeader from "@/components/greenHouse/GreenHouseHeader";
-import InformationGreenHouse from "@/components/greenHouse/InformationGreenHouse";
-import ServicesGreenhouse from "@/components/greenHouse/ServicesGreenhouse";
+
+import BenefitsGreenhouse from "../../components/GreenHouse/BenefitsGreenhouse";
+import GetGreenhouse from "../../components/GreenHouse/GetGreenhouse";
+import GreenHouseHeader from "../../components/GreenHouse/GreenHouseHeader";
+import InformationGreenHouse from "../../components/GreenHouse/InformationGreenHouse";
+import ServicesGreenhouse from "../../components/GreenHouse/ServicesGreenhouse";
+
 import NavBar from "@/components/NavBar";
 
 function greenHouse() {

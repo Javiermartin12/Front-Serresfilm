@@ -1,3 +1,4 @@
+"use client";
 import Footer from "@/components/Footer";
 import CompanyValues from "@/components/MeetUs/CompanyValues";
 import ImagesComponent from "@/components/MeetUs/ImagesComponent";
