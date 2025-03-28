@@ -23,7 +23,7 @@ function HeaderHome() {
       >
         <motion.img
           src="https://res.cloudinary.com/dd5zkfvbo/image/upload/v1741107306/Greenhouse-1_atu5vj.jpg"
-          alt="Invernadero en cultivo de tomates"
+          alt="Invernadero en cultivo de tomates - Serresfilm SL"
           initial={{ scale: 1 }} // Empieza con el tamaño normal
           animate={{ scale: 1.2 }} // Aumenta al 110% de su tamaño original
           loading="lazy"
