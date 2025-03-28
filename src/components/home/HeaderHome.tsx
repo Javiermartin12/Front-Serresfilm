@@ -23,9 +23,10 @@ function HeaderHome() {
       >
         <motion.img
           src="https://res.cloudinary.com/dd5zkfvbo/image/upload/v1741107306/Greenhouse-1_atu5vj.jpg"
-          alt="invernadero"
+          alt="Invernadero en cultivo de tomates"
           initial={{ scale: 1 }} // Empieza con el tamaño normal
           animate={{ scale: 1.2 }} // Aumenta al 110% de su tamaño original
+          loading="lazy"
           transition={{
             repeat: Infinity, // Repite la animación de forma indefinida
             repeatType: "reverse", // Hace que vuelva al tamaño original después de expandirse
@@ -42,8 +43,8 @@ function HeaderHome() {
 
         {/* Texto - Mejor ajuste para grandes pantallas */}
         <Typography
-          variant="h2"
-          component={motion.h2}
+          variant="h1"
+          component={motion.h1}
           initial={{ opacity: 0, x: -200 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: "easeInOut" }}
