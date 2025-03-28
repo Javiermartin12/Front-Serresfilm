@@ -6,11 +6,13 @@ interface CardMachineryProps {
   image: string;
   title: string;
   description: string;
+  alt?: string;
 }
 const CardMachinery: React.FC<CardMachineryProps> = ({
   image,
   title,
   description,
+  alt = title,
 }) => {
   return (
     <Box
@@ -18,8 +20,9 @@ const CardMachinery: React.FC<CardMachineryProps> = ({
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
+        overflow: "hidden",
         alignItems: "center",
-        border: "1px solid #e0e0e0",
+
         borderRadius: "8px",
         boxShadow: 3,
         maxWidth: "30%",
@@ -29,8 +32,13 @@ const CardMachinery: React.FC<CardMachineryProps> = ({
       <Box
         component="img"
         src={image}
-        alt={title}
-        style={{ width: "100%", height: "auto" }}
+        alt={alt}
+        sx={{
+          width: "100%",
+          height: "auto",
+
+          overflow: "hidden",
+        }}
       />
       <Box sx={{ padding: 2, textAlign: "center" }}>
         <Typography variant="h6" fontWeight="bold">

@@ -8,25 +8,32 @@ const machinery = [
     image:
       "https://res.cloudinary.com/dd5zkfvbo/image/upload/t_My Logo/v1741105833/carroestandar_lesal9.jpg",
     title: "Maquinaria 1",
-    description: "Descripción de la maquinaria 1",
+    description:
+      "Carro de recolección con rueda de aire para recoger genero, verdura, frutas, etc.",
+    alt: "Carro de recolección con rueda de aire para recoger genero, verdura, frutas, etc.",
   },
   {
     image:
       "https://res.cloudinary.com/dd5zkfvbo/image/upload/t_My Logo/v1741105833/volquete_dfemvj.jpg",
     title: "Maquinaria 2",
-    description: "Descripción de la maquinaria 2",
+    description:
+      "Volquete para transporte de material, escombros,deshechos, etc.",
+    alt: "Volquete para transporte de material, escombros, deshechos, etc.",
   },
   {
     image:
       "https://res.cloudinary.com/dd5zkfvbo/image/upload/t_My Logo/v1741105834/carrosilla_kvy7wj.jpg",
     title: "Maquinaria 3",
-    description: "Descripción de la maquinaria 3",
+    description:
+      "Carro silla para no trabajar agachado y evitar dolores de espalda, etc.",
+    alt: "ICarro silla para no trabajar agachado y evitar dolores de espalda, etc.",
   },
   {
     image:
       "https://res.cloudinary.com/dd5zkfvbo/image/upload/t_My Logo/v1741105833/carrosandias_fzymkg.jpg",
     title: "Maquinaria 4",
-    description: "Descripción de la maquinaria 4",
+    description: "Carro de sandias para recolección de sandias, melones, etc.",
+    alt: "Carro de sandias para recolección de sandias, melones, etc.",
   },
 ];
 
@@ -101,6 +108,7 @@ function MachineryHome() {
             boxShadow: 2,
             zIndex: 2,
             "&:hover": { backgroundColor: "#f0f0f0" },
+            display: { xs: "none", md: "block" },
           }}
         >
           <ArrowBack />
@@ -110,9 +118,10 @@ function MachineryHome() {
         <Box
           sx={{
             display: "flex",
-            transition: "transform 0.5s ease-in-out",
+            transition: "transform 0.9s ease-in-out, opacity 0.5s ease-in-out", // Fade effect added
             transform: `translateX(-${currentIndex * 100}%)`,
             width: `${machinery.length * 100}%`,
+            opacity: 1, // Fade effect
           }}
         >
           {machinery.map((item, index) => (
@@ -130,6 +139,7 @@ function MachineryHome() {
                 image={item.image}
                 title={item.title}
                 description={item.description}
+                // alt description added
               />
             </Box>
           ))}
@@ -145,6 +155,7 @@ function MachineryHome() {
             boxShadow: 2,
             zIndex: 2,
             "&:hover": { backgroundColor: "#f0f0f0" },
+            display: { xs: "none", md: "block" },
           }}
         >
           <ArrowForward />

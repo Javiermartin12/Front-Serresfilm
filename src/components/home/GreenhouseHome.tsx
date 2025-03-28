@@ -1,18 +1,18 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
 
-function GreenhouseHome() {
+const GreenhouseHome = React.memo(function GreenhouseHome() {
   return (
     <Box
       sx={{
         display: "flex",
         flexDirection: { xs: "column", md: "row" },
         alignItems: "center",
-        minHeight: { md: "100vh" }, // En móviles, usamos height: "auto"
+        minHeight: { md: "100vh" },
         height: "auto",
         width: "100%",
         backgroundColor: "#fff",
-        padding: { xs: 4, md: 4 }, // Ajuste de padding para mejor UX
+        padding: { xs: 4, md: 4 },
       }}
     >
       {/* Sección de texto */}
@@ -69,8 +69,9 @@ function GreenhouseHome() {
       {/* Imagen */}
       <Box
         component="img"
-        src="https://res.cloudinary.com/dd5zkfvbo/image/upload/t_My Logo/v1741106540/839b26ef-4c77-439f-864c-da66143c6086_jtyjsp.jpg"
+        src="https://res.cloudinary.com/dd5zkfvbo/image/upload/q_auto,f_webp,dpr_auto/v1741106540/839b26ef-4c77-439f-864c-da66143c6086_jtyjsp.jpg"
         alt="Invernadero"
+        loading="lazy"
         sx={{
           width: { xs: "100%", md: "50%" },
           height: "auto",
@@ -82,6 +83,6 @@ function GreenhouseHome() {
       />
     </Box>
   );
-}
+});
 
 export default GreenhouseHome;

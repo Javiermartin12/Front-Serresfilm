@@ -18,7 +18,8 @@ function WarehouseHome() {
       <Box
         component="img"
         src="https://res.cloudinary.com/dd5zkfvbo/image/upload/t_My Logo/v1741106789/1d34500b-bc09-4c52-915a-27f76aa0004b_c0mvt4.jpg"
-        alt="Invernadero"
+        alt="Almacenes construidos por Serresfilm SL"
+        loading="lazy"
         sx={{
           width: { xs: "100%", md: "50%" },
           height: "auto",
