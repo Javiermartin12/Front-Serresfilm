@@ -118,6 +118,7 @@ function NavBar() {
                 key={`${link.href}-${index}`}
                 component={Link}
                 href={link.href}
+                aria-label={`Ir a ${link.label}`} //proporcionar más contexto a los usuarios con discapacidades visuales
                 sx={{
                   color: "text.primary",
                   textTransform: "none",
