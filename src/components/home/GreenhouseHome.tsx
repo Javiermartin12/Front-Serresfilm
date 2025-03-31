@@ -1,9 +1,14 @@
-import { Box, Typography } from "@mui/material";
-import React from "react";
+import { Box, Button, Typography } from "@mui/material";
+import { motion, useInView } from "framer-motion";
+import React, { useRef } from "react";
 
 const GreenhouseHome = React.memo(function GreenhouseHome() {
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: true, margin: "-200px" });
+
   return (
     <Box
+      ref={sectionRef}
       sx={{
         display: "flex",
         flexDirection: { xs: "column", md: "row" },
@@ -16,44 +21,57 @@ const GreenhouseHome = React.memo(function GreenhouseHome() {
       }}
     >
       {/* Sección de texto */}
-      <Box sx={{ margin: 3, maxWidth: "600px", width: "100%" }}>
+      <Box sx={{ margin: 3, padding: 3, maxWidth: "600px", width: "100%" }}>
         <Typography
-          variant="h5"
+          component={motion.h2}
+          variant="h2"
           fontWeight="bold"
-          mb={2}
-          fontSize={{ xs: 20, md: 24 }}
+          sx={{ color: "darkgreen" }}
+          mb={5}
+          fontSize={{ xs: 22, md: 36 }}
+          initial={{ opacity: 0, y: 50 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
         >
-          Explora nuestra variedad de invernaderos hechos hasta hoy día.
+          Explora nuestros invernaderos.
         </Typography>
 
         <Typography
-          sx={{ fontSize: { xs: 14, md: 16 }, lineHeight: 1.5, mb: 3 }}
+          sx={{ fontSize: { xs: 14, md: 18 }, lineHeight: 1.5, mb: 3 }}
+          component={motion.p}
+          initial={{ opacity: 0, y: 50 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, ease: "easeInOut", delay: 0.2 }}
         >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
-          iure, laudantium aspernatur est voluptas aut mollitia odit odio vero
-          aliquam nesciunt.
+          Ideales para una producción más refinada. Su diseño hermético permite
+          un excelente control del clima y una mayor eficiencia en la
+          producción.
         </Typography>
 
-        {/* Características */}
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: { xs: "column", md: "row" },
-            gap: 2,
-          }}
-        >
+        {/* Características con animación escalonada */}
+        <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
           {[
             {
-              title: "Diseño duradero y resistente.",
+              title: "✔ Diseño duradero y resistente.",
               desc: "Estructuras diseñadas para durar años.",
             },
             {
-              title: "Opciones de personalización.",
+              title: "✔ Opciones de personalización.",
               desc: "Adaptamos los invernaderos a tus necesidades.",
             },
           ].map((feature, index) => (
-            <Box key={index}>
-              <Typography fontWeight="bold" mb={1}>
+            <Box
+              key={index}
+              component={motion.div}
+              initial={{ opacity: 0, y: 50 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{
+                duration: 0.8,
+                ease: "easeInOut",
+                delay: 0.4 + index * 0.2, // Retrasa cada uno progresivamente
+              }}
+            >
+              <Typography fontWeight="bold" fontSize={18} mb={1}>
                 {feature.title}
               </Typography>
               <Typography
@@ -64,21 +82,44 @@ const GreenhouseHome = React.memo(function GreenhouseHome() {
             </Box>
           ))}
         </Box>
+
+        {/* Botón animado con retraso */}
+        <Button
+          component={motion.button}
+          initial={{ opacity: 0, y: 50 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, ease: "easeInOut", delay: 0.8 }}
+          variant="contained"
+          size="medium"
+          sx={{ m: 5, backgroundColor: "green", color: "#fff" }}
+        >
+          Más información
+        </Button>
       </Box>
 
       {/* Imagen */}
       <Box
-        component="img"
+        component={motion.img}
         src="https://res.cloudinary.com/dd5zkfvbo/image/upload/q_auto,f_webp,dpr_auto/v1741106540/839b26ef-4c77-439f-864c-da66143c6086_jtyjsp.jpg"
         alt="Invernadero"
         loading="lazy"
         sx={{
-          width: { xs: "100%", md: "50%" },
+          width: "50%",
+          transition: {
+            xs: "transform 0.5s ease-in-out",
+            sm: "transform 0.5s ease-in-out",
+          },
+          "&:hover": {
+            transform: {
+              xs: "scale(1.2)",
+              sm: "scale(1.3) translateX(-10%)",
+              md: "scale(1.3) translateX(-10%)",
+            },
+          },
           height: "auto",
-          maxHeight: "500px",
           objectFit: "cover",
           flexShrink: 0,
-          py: 2,
+          paddingTop: "10px",
         }}
       />
     </Box>
