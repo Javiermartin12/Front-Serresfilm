@@ -5,14 +5,8 @@ import NavBar from "../NavBar";
 
 function HeaderHome() {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 2 }}
-      transition={{ duration: 2 }}
-    >
+    <>
       <NavBar />
-
-      {/* Contenedor con overflow hidden */}
       <Box
         sx={{
           width: "100%",
@@ -96,7 +90,7 @@ function HeaderHome() {
           Aumenta tu producción, cultiva tus plantas a otro nivel.
         </Typography>
       </Box>
-    </motion.div>
+    </>
   );
 }
 
