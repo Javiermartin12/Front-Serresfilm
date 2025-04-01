@@ -85,7 +85,8 @@ const GreenhouseHome = React.memo(function GreenhouseHome() {
 
         {/* Botón animado con retraso */}
         <Button
-          component={motion.button}
+          component={motion.a}
+          href="/greenHouse"
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, ease: "easeInOut", delay: 0.8 }}
@@ -96,30 +97,33 @@ const GreenhouseHome = React.memo(function GreenhouseHome() {
           Más información
         </Button>
       </Box>
-
       {/* Imagen */}
       <Box
         component={motion.img}
-        src="https://res.cloudinary.com/dd5zkfvbo/image/upload/q_auto,f_webp,dpr_auto/v1741106540/839b26ef-4c77-439f-864c-da66143c6086_jtyjsp.jpg"
+        src="https://res.cloudinary.com/dd5zkfvbo/image/upload/v1741106533/9f68465c-6edd-45ac-83b3-6d3d1c7f3a19_wle1db.jpg"
         alt="Invernadero"
         loading="lazy"
         sx={{
-          width: "50%",
+          width: { xs: "100%", md: "50%" },
+          height: { xs: "auto", md: "65%" },
+          borderRadius: 2,
           transition: {
             xs: "transform 0.5s ease-in-out",
             sm: "transform 0.5s ease-in-out",
           },
+
           "&:hover": {
+            boxShadow: { xs: "none", md: "0px 0px 100px rgba(0, 0, 0, 0.9)" },
+
             transform: {
-              xs: "scale(1.2)",
-              sm: "scale(1.3) translateX(-10%)",
-              md: "scale(1.3) translateX(-10%)",
+              xs: "scale(1.4)",
+              sm: "scale(1.3) ",
+              md: "scale(1.6) translateX(-20%)",
             },
           },
-          height: "auto",
+
           objectFit: "cover",
           flexShrink: 0,
-          paddingTop: "10px",
         }}
       />
     </Box>
