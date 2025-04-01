@@ -104,7 +104,7 @@ const GreenhouseHome = React.memo(function GreenhouseHome() {
         alt="Invernadero"
         loading="lazy"
         sx={{
-          width: { xs: "100%", md: "50%" },
+          width: { xs: "100%", md: "65%" },
           height: { xs: "auto", md: "65%" },
           borderRadius: 2,
           transition: {
@@ -118,7 +118,7 @@ const GreenhouseHome = React.memo(function GreenhouseHome() {
             transform: {
               xs: "scale(1.4)",
               sm: "scale(1.3) ",
-              md: "scale(1.6) translateX(-20%)",
+              md: "scale(1.4) translateX(-20%)",
             },
           },
 
