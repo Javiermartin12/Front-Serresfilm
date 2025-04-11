@@ -16,13 +16,12 @@ const GreenHouseHeader = () => {
       {/* Imagen - Ajuste para pantallas pequeñas */}
       <Box
         component="img"
-        src="https://source.unsplash.com/1600x900/?greenhouse" // Imagen de ejemplo
+        src="https://res.cloudinary.com/dd5zkfvbo/image/upload/v1741106529/6e55a385-fdbe-466d-8491-139e2016be0d_f7e5e7.jpg" // Imagen de ejemplo
         alt="Invernadero"
         sx={{
           width: "100%",
-          height: { xs: "50vh", sm: "60vh", md: "70vh" }, // Ajuste para responsividad
+          height: { xs: "50vh", sm: "60vh", md: "80vh" }, // Ajuste para responsividad
           objectFit: "cover",
-          border: "1px solid rgb(0, 0, 0)",
         }}
       />
 
