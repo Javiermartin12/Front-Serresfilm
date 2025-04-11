@@ -1,6 +1,5 @@
-import { Typography } from "@mui/material";
-import Box from "@mui/material/Box/Box";
 import React from "react";
+import { Box, Typography } from "@mui/material";
 
 interface CardMachineryProps {
   image: string;
@@ -8,6 +7,7 @@ interface CardMachineryProps {
   description: string;
   alt?: string;
 }
+
 const CardMachinery: React.FC<CardMachineryProps> = ({
   image,
   title,
@@ -19,14 +19,19 @@ const CardMachinery: React.FC<CardMachineryProps> = ({
       sx={{
         display: "flex",
         flexDirection: "column",
-        justifyContent: "center",
-        overflow: "hidden",
         alignItems: "center",
-
-        borderRadius: "8px",
+        borderRadius: 2,
         boxShadow: 3,
-        maxWidth: "30%",
-        maxHeight: "100%",
+        overflow: "hidden",
+        textAlign: "center",
+        backgroundColor: "#fff",
+        width: {
+          xs: "20%", // móviles
+          sm: "20%", // tablets pequeñas
+          md: 300, // portátiles
+          lg: 320, // pantallas grandes
+        },
+        margin: "auto", // centrado si está en una columna
       }}
     >
       <Box
@@ -36,15 +41,15 @@ const CardMachinery: React.FC<CardMachineryProps> = ({
         sx={{
           width: "100%",
           height: "auto",
-
-          overflow: "hidden",
+          objectFit: "cover",
+          padding: 1,
         }}
       />
-      <Box sx={{ padding: 2, textAlign: "center" }}>
-        <Typography variant="h6" fontWeight="bold">
+      <Box sx={{ padding: 2 }}>
+        <Typography variant="h6" fontWeight="bold" gutterBottom>
           {title}
         </Typography>
-        <Typography>{description}</Typography>
+        <Typography variant="body2">{description}</Typography>
       </Box>
     </Box>
   );
