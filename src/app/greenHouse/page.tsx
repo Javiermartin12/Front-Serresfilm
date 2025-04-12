@@ -3,8 +3,9 @@ import Footer from "@/components/Footer";
 
 import BenefitsGreenhouse from "@/components/GreenHouse/BenefitsGreenhouse";
 import GetGreenhouse from "@/components/GreenHouse/GetGreenhouse";
-import GreenHouseHeader from "@/components/GreenHouse/GreenHouseHeader";
-import InformationGreenHouse from "@/components/GreenHouse/InformationGreenHouse";
+import GreenhouseHeader from "@/components/GreenHouse/GreenhouseHeader";
+import InformationGreenhouse from "@/components/GreenHouse/InformationGreenhouse";
+
 import ServicesGreenhouse from "@/components/GreenHouse/ServicesGreenhouse";
 
 import NavBar from "@/components/NavBar";
@@ -13,8 +14,8 @@ function greenHouse() {
   return (
     <div>
       <NavBar />
-      <GreenHouseHeader />
-      <InformationGreenHouse />
+      <GreenhouseHeader />
+      <InformationGreenhouse />
       <BenefitsGreenhouse />
       <ServicesGreenhouse />
       <GetGreenhouse />
