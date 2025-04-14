@@ -16,11 +16,11 @@ const WarehouseHeader = () => {
       {/* Imagen - Ajuste para pantallas pequeñas */}
       <Box
         component="img"
-        src="https://source.unsplash.com/1600x900/?greenhouse"
+        src="https://res.cloudinary.com/dd5zkfvbo/image/upload/v1741106786/0c3d35a7-0d57-4340-af09-4caa37f62d61_dsjr2f.jpg"
         alt="Almacen"
         sx={{
           width: "100%",
-          height: { xs: "50vh", sm: "60vh", md: "70vh" }, // Ajuste para responsividad
+          height: { xs: "50vh", sm: "60vh", md: "80vh" }, // Ajuste para responsividad
           objectFit: "cover",
           border: "1px solid rgb(0, 0, 0)",
         }}
