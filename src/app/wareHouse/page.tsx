@@ -15,8 +15,8 @@ function wareHouse() {
       <NavBar />
       <WarehouseHeader />
       <InformationWarehouse />
-      <ServicesWarehouse />
       <BenefitsWarehouse />
+      <ServicesWarehouse />
       <GetWarehouse />
       <Footer />
     </div>
