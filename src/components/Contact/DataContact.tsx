@@ -56,7 +56,8 @@ const DataContact = () => {
             textAlign: "center",
             minHeight: 350,
             padding: 3,
-            gap: 2,
+            pt: 10,
+            gap: 1,
             flexGrow: 1,
           }}
         >
