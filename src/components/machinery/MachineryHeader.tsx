@@ -3,10 +3,16 @@ import React from "react";
 
 const images = [
   "https://res.cloudinary.com/dd5zkfvbo/image/upload/t_My Logo/v1741105833/volquete_dfemvj.jpg",
-  "https://res.cloudinary.com/dd5zkfvbo/image/upload/t_My Logo/v1741105833/volquete_dfemvj.jpg",
-  "https://res.cloudinary.com/dd5zkfvbo/image/upload/t_My Logo/v1741105833/volquete_dfemvj.jpg",
-  "https://res.cloudinary.com/dd5zkfvbo/image/upload/t_My Logo/v1741105833/volquete_dfemvj.jpg",
-  "https://res.cloudinary.com/dd5zkfvbo/image/upload/t_My Logo/v1741105833/volquete_dfemvj.jpg",
+  "https://res.cloudinary.com/dd5zkfvbo/image/upload/v1741105834/carrosilla_kvy7wj.jpg",
+  "https://res.cloudinary.com/dd5zkfvbo/image/upload/v1741105833/carroestandar_lesal9.jpg",
+  "https://res.cloudinary.com/dd5zkfvbo/image/upload/v1741105833/carrodelagoma_iijrf3.jpg",
+  "https://res.cloudinary.com/dd5zkfvbo/image/upload/v1741105833/carrobobinas_eo6jos.jpg",
+  "https://res.cloudinary.com/dd5zkfvbo/image/upload/v1741105833/armariodospuertas_jkeqhy.jpg",
+  "https://res.cloudinary.com/dd5zkfvbo/image/upload/v1741105832/carroandamio_igfye4.jpg",
+  "https://res.cloudinary.com/dd5zkfvbo/image/upload/v1741105832/carro4patas_jwq6fd.jpg",
+  "https://res.cloudinary.com/dd5zkfvbo/image/upload/v1741105833/aramriotrespuertas_mu4cr7.jpg",
+  "https://res.cloudinary.com/dd5zkfvbo/image/upload/v1741105832/4patassuministros_l0v6he.jpg",
+  "https://res.cloudinary.com/dd5zkfvbo/image/upload/v1741105832/carroancho_i2ut3i.jpg",
 ]; // Puedes agregar más imágenes reales aquí
 
 const scrollAnimation = (duration: number) => ({
