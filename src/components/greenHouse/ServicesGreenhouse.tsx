@@ -12,21 +12,22 @@ import { motion } from "framer-motion";
 function ServicesGreenhouse() {
   const services = [
     {
-      title: "Expert Installation for Your Greenhouse",
+      title: "Mantenimiento de Plásticos y Mallas",
       description:
-        "Our skilled technicians ensure a seamless installation process.",
-      icon: "🛠️",
+        "Extracción e instalación eficiente de plásticos y mallas protectoras. Nos encargamos del recambio y colocación de plásticos y mallas, asegurando una correcta protección y aislamiento del invernadero en todo momento.",
+      icon: "🔄",
     },
     {
-      title: "Custom Invernadero Designs Tailored to You",
-      description: "We create unique designs that meet your specific needs.",
-      icon: "🎨",
+      title: "Mantenimiento de Automatismos y Control Climático",
+      description:
+        "Revisión de sistemas de clima, riego y componentes eléctricos. Realizamos el mantenimiento de automatismos como controladores de clima, finales de carrera, sistemas de riego y más, para garantizar un funcionamiento óptimo y sin fallos.",
+      icon: "⚙️ ",
     },
     {
-      title: "Reliable Maintenance Services for Longevity",
+      title: "Mantenimiento de Ventanas, Perfiles y Estructura Metálica",
       description:
-        "Keep your invernadero in top shape with our maintenance services.",
-      icon: "🔧",
+        "Cuidado integral de ventanas, perfiles de aluminio y estructuras de hierro. Conservamos la integridad estructural de tu invernadero mediante la revisión y reparación de sus componentes clave, evitando el deterioro y prolongando su vida útil.",
+      icon: "🧱",
     },
   ];
 
@@ -68,7 +69,7 @@ function ServicesGreenhouse() {
             mb: 2,
           }}
         >
-          Services
+          Servicios
         </Typography>
         <Typography
           variant="h5"
@@ -79,7 +80,7 @@ function ServicesGreenhouse() {
             mb: 3,
           }}
         >
-          Comprehensive Solutions for Your Invernadero Needs
+          {"Soluciones integrales para la necesidad de su invernadero "}
         </Typography>
         <Typography
           variant="body1"
@@ -90,9 +91,10 @@ function ServicesGreenhouse() {
             mb: 4,
           }}
         >
-          We offer a range of services tailored to enhance your greenhouse
-          experience. From installation to maintenance, our expert team is here
-          to support you every step of the way.
+          Ofrecemos una gama de servicios diseñados para mejorar su experiencia
+          en el invernadero. Desde la instalación hasta el mantenimiento,
+          nuestro equipo de expertos está aquí para ayudarle en cada paso del
+          proceso.
         </Typography>
 
         {/* CTA Buttons */}
@@ -107,6 +109,7 @@ function ServicesGreenhouse() {
           <Button
             variant="contained"
             size="large"
+            href="tel:+34649961062"
             sx={{
               px: 4,
               py: 1.5,
@@ -115,21 +118,7 @@ function ServicesGreenhouse() {
               "&:hover": { backgroundColor: "primary.dark" },
             }}
           >
-            Learn More
-          </Button>
-          <Button
-            variant="outlined"
-            size="large"
-            sx={{
-              px: 4,
-              py: 1.5,
-              fontSize: "1rem",
-              borderColor: "primary.main",
-              color: "primary.main",
-              "&:hover": { borderColor: "primary.dark" },
-            }}
-          >
-            Sign Up
+            Contactar
           </Button>
         </Box>
       </Box>
@@ -210,47 +199,6 @@ function ServicesGreenhouse() {
             </CardContent>
           </Card>
         ))}
-      </Box>
-
-      {/* Additional Content Section */}
-      <Box
-        component={motion.div}
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.8, delay: 0.3 }}
-        viewport={{ once: true }}
-        sx={{
-          width: "100%",
-          maxWidth: "800px",
-          textAlign: "center",
-          mt: { xs: 6, md: 8 },
-          mb: { xs: 2, md: 0 },
-        }}
-      >
-        <Typography
-          variant="h5"
-          component="h4"
-          fontWeight="bold"
-          sx={{
-            fontSize: { xs: "1.25rem", md: "1.5rem" },
-            color: "primary.main",
-            mb: 3,
-          }}
-        >
-          Medium length section heading goes here
-        </Typography>
-        <Typography
-          variant="body1"
-          sx={{
-            fontSize: { xs: "1rem", md: "1.1rem" },
-            lineHeight: 1.8,
-            color: "text.primary",
-          }}
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          varius enim in eros elementum tristique. Duis cursus, mi quis viverra
-          ornare, eros dolor interdum nulla.
-        </Typography>
       </Box>
     </Box>
   );

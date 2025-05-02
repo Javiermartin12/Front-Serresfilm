@@ -17,23 +17,23 @@ function ServicesWarehouse() {
 
   const services = [
     {
-      title: "Expert Installation for Your Greenhouse",
+      title: "Mantenimiento Integral de Estructuras y Cubiertas",
       description:
-        "Our skilled technicians ensure a seamless installation process with precision and care.",
+        "Nuestro equipo técnico realiza mantenimiento especializado en techos, chapas y estructuras metálicas, asegurando que tu almacén conserve su resistencia y funcionalidad a lo largo del tiempo. Evita filtraciones, deformaciones o deterioros que puedan afectar tu producción.",
       icon: "🛠️",
       color: theme.palette.primary.light,
     },
     {
-      title: "Custom Greenhouse Designs",
+      title: "Puertas automatizadas, sistemas de apertura y seguridad a medida",
       description:
-        "Tailored solutions that match your vision and space requirements perfectly.",
-      icon: "🎨",
+        "Moderniza tu almacén con automatismos adaptados a tu operativa diaria: puertas enrollables, batientes o correderas con motor, sensores de seguridad y sistemas de control remoto. Mejora la eficiencia y reduce el esfuerzo manual.",
+      icon: "⚙️",
       color: theme.palette.secondary.light,
     },
     {
-      title: "Premium Maintenance Services",
+      title: "Soluciones en Materiales de Alta Eficiencia",
       description:
-        "Comprehensive care to keep your greenhouse in optimal condition year-round.",
+        "Cada proyecto requiere un tipo de material diferente. Te asesoramos e instalamos la opción más adecuada: Panel sándwich para un aislamiento térmico y acústico superior.        Policarbonato para mayor iluminación natural.Cubiertas textiles para soluciones ligeras y flexibles.Nos encargamos de todo el proceso, desde la selección hasta la instalación final.",
       icon: "🔧",
       color: theme.palette.info.light,
     },
@@ -117,7 +117,7 @@ function ServicesWarehouse() {
               lineHeight: 1.2,
             }}
           >
-            Premium Greenhouse Solutions
+            Servicios
           </Typography>
           <Typography
             component={motion.div}
@@ -129,21 +129,9 @@ function ServicesWarehouse() {
               mb: 3,
             }}
           >
-            Elevate your growing experience with our expert services
-          </Typography>
-          <Typography
-            component={motion.div}
-            variants={itemVariants}
-            variant="body1"
-            sx={{
-              fontSize: { xs: "1rem", md: "1.1rem" },
-              lineHeight: 1.8,
-              color: "rgba(255,255,255,0.8)",
-              mb: 4,
-            }}
-          >
-            We combine innovation with expertise to deliver exceptional
-            greenhouse solutions tailored to your unique needs.
+            Eleva tu experiencia de almacenamiento con nuestros servicios
+            especializados. Desde el mantenimiento de estructuras hasta la
+            instalación de sistemas automatizados.
           </Typography>
 
           {/* CTA Buttons */}
@@ -171,28 +159,7 @@ function ServicesWarehouse() {
                 transition: "all 0.3s ease",
               }}
             >
-              Explore Services
-            </Button>
-            <Button
-              variant="outlined"
-              size="large"
-              sx={{
-                px: 5,
-                py: 1.5,
-                fontSize: "1rem",
-                fontWeight: 600,
-                borderRadius: 2,
-                borderWidth: 2,
-                color: "common.white",
-                borderColor: "rgba(255,255,255,0.7)",
-                "&:hover": {
-                  borderColor: "common.white",
-                  backgroundColor: "rgba(255,255,255,0.1)",
-                },
-                transition: "all 0.3s ease",
-              }}
-            >
-              Contact Us
+              Contacto
             </Button>
           </Stack>
         </Box>
@@ -292,20 +259,6 @@ function ServicesWarehouse() {
                 >
                   {service.description}
                 </Typography>
-                <Button
-                  variant="text"
-                  size="small"
-                  sx={{
-                    mt: "auto",
-                    fontWeight: 600,
-                    color: service.color,
-                    "&:hover": {
-                      backgroundColor: `${service.color}10`,
-                    },
-                  }}
-                >
-                  Learn more →
-                </Button>
               </CardContent>
             </Card>
           ))}
@@ -343,7 +296,7 @@ function ServicesWarehouse() {
               color: "text.primary",
             }}
           >
-            Why Choose Our Services?
+            ¿Por que nos eligen?
           </Typography>
           <Typography
             variant="body1"
@@ -354,10 +307,10 @@ function ServicesWarehouse() {
               mb: 4,
             }}
           >
-            With over 15 years of experience in greenhouse solutions, we combine
-            cutting-edge technology with sustainable practices to deliver
-            exceptional results. Our team of certified professionals is
-            committed to excellence in every project.
+            Con más de 25 años de experiencia en soluciones para invernaderos,
+            combinamos tecnología de vanguardia con prácticas sostenibles para
+            ofrecer resultados excepcionales. Nuestro equipo de profesionales
+            certificados está comprometido con la excelencia en cada proyecto.
           </Typography>
           <Divider sx={{ my: 3, mx: "auto", width: "80%" }} />
           <Box
@@ -368,7 +321,7 @@ function ServicesWarehouse() {
               mt: 4,
             }}
           >
-            {["15+ Years Experience", "100% Satisfaction", "Eco-Friendly"].map(
+            {["25+ Years Experience", "100% Satisfaction", "Economic"].map(
               (item, i) => (
                 <Box key={i} sx={{ textAlign: "center" }}>
                   <Typography

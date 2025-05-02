@@ -21,7 +21,7 @@ const WarehouseHeader = () => {
         sx={{
           width: "100%",
           height: { xs: "50vh", sm: "60vh", md: "80vh" }, // Ajuste para responsividad
-          objectFit: "cover",
+          objectFit: "",
           border: "1px solid rgb(0, 0, 0)",
         }}
       />
@@ -44,15 +44,17 @@ const WarehouseHeader = () => {
           variant="h3"
           fontWeight="bold"
           fontSize={{ xs: "2rem", sm: "2.5rem", md: "3rem" }}
+          sx={{ color: "darkgreen" }}
         >
-          Almacenes de Alta Tecnología
+          Almacenes Serresfilm
         </Typography>
         <Typography
           variant="body1"
           sx={{ marginTop: 2, fontSize: { xs: "1rem", md: "1.2rem" } }}
         >
-          Nuestros almacenes están diseñados para maximizar la producción y la
-          eficiencia energética, utilizando los materiales más avanzados.
+          Nuestros almacenes están diseñados para maximizar el almacenado y la
+          cubrir el desgaste de la intemperie, utilizando los materiales de la
+          mejor calidad.
         </Typography>
       </Box>
     </Box>

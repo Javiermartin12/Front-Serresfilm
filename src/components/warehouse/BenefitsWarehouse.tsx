@@ -44,7 +44,7 @@ function BenefitsWarehouse() {
             mb: 3,
           }}
         >
-          Beneficios de un invernadero{" "}
+          {"Beneficios de un Almacen "}
         </Typography>
         <Typography
           variant="body1"
@@ -54,9 +54,10 @@ function BenefitsWarehouse() {
             color: "text.primary",
           }}
         >
-          Our invernaderos are designed with sustainability in mind, using
-          eco-friendly materials that minimize environmental impact. Experience
-          the perfect blend of efficiency and care for the planet.
+          Nuestros almacenes tipo capilla combinan resistencia estructural,
+          funcionalidad y un diseño optimizado para el entorno agrícola. Están
+          pensados para ofrecer una solución de almacenamiento duradera,
+          eficiente y fácilmente adaptable a diferentes necesidades.
         </Typography>
       </Box>
 
@@ -98,11 +99,12 @@ function BenefitsWarehouse() {
               fontWeight="bold"
               sx={{ mb: 2, color: "primary.dark" }}
             >
-              Eco-Friendly Materials
+              🔹 Estructura de doble arco
             </Typography>
             <Typography variant="body1">
-              Our greenhouses use sustainable materials that reduce
-              environmental impact while maintaining durability.
+              La forma en “capilla” proporciona una resistencia superior al
+              viento, a la lluvia y a cargas de peso como nieve o equipos
+              suspendidos.
             </Typography>
           </Box>
           <Box
@@ -120,11 +122,12 @@ function BenefitsWarehouse() {
               fontWeight="bold"
               sx={{ mb: 2, color: "primary.dark" }}
             >
-              Energy Efficient
+              🔹 Ampliamente personalizable
             </Typography>
             <Typography variant="body1">
-              Designed to maximize natural light and heat retention, reducing
-              energy costs.
+              Puedes adaptar dimensiones, tipo de cubierta (plástico,
+              policarbonato, malla), puertas automáticas, zonas de trabajo o
+              almacenamiento separado.
             </Typography>
           </Box>
         </Box>
@@ -169,11 +172,11 @@ function BenefitsWarehouse() {
               fontWeight="bold"
               sx={{ mb: 2, color: "primary.dark" }}
             >
-              Advanced Technology
+              🔹 Montaje rápido y modular
             </Typography>
             <Typography variant="body1">
-              Smart climate control systems for optimal growing conditions
-              year-round.
+              Gracias a su estructura prefabricada, el tiempo de instalación se
+              reduce sin comprometer la solidez.
             </Typography>
           </Box>
           <Box
@@ -191,11 +194,12 @@ function BenefitsWarehouse() {
               fontWeight="bold"
               sx={{ mb: 2, color: "primary.dark" }}
             >
-              Customizable
+              🔹 Uso versátil
             </Typography>
             <Typography variant="body1">
-              Modular designs that can be adapted to your specific needs and
-              space.
+              Perfectos como almacenes para herramientas, fertilizantes,
+              maquinaria, zonas de preparación o incluso como pequeños centros
+              de empaquetado.
             </Typography>
           </Box>
         </Box>
@@ -219,16 +223,18 @@ function BenefitsWarehouse() {
         <Typography
           variant="h5"
           sx={{
-            fontSize: { xs: "1.5rem", md: "1rem" },
+            fontSize: { xs: "1.5rem", md: "1.4rem" },
             color: "text.primary",
             textAlign: { xs: "center", sm: "left" },
           }}
         >
-          Ready to transform your growing experience? Lorem, ipsum dolor sit
-          amet consectetur adipisicing elit. Temporibus impedit consectetur quos
-          facilis reprehenderit quidem explicabo? Esse dicta laboriosam nostrum
-          unde doloribus, consectetur est quo perspiciatis facere,
-          necessitatibus amet sapiente.
+          🌾 Pensados para el campo, diseñados para durar Estos almacenes no son
+          solo funcionales, también están hechos para integrarse con tu
+          explotación agrícola, permitiendo aprovechar al máximo el espacio,
+          facilitar el trabajo diario y proteger tu inversión. ¿Sabías que? Las
+          estructuras tipo capilla permiten instalar fácilmente sistemas de
+          ventilación cenital, entradas automatizadas y climatización
+          controlada.
         </Typography>
       </Box>
     </Box>

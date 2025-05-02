@@ -30,7 +30,7 @@ function BenefitsGreenhouse() {
           fontWeight="bold"
           sx={{
             fontSize: { xs: "2rem", sm: "2.5rem", md: "3rem" },
-            color: "primary.main",
+            color: "darkgreen",
             mb: 2,
           }}
         >
@@ -54,9 +54,10 @@ function BenefitsGreenhouse() {
             color: "text.primary",
           }}
         >
-          Our invernaderos are designed with sustainability in mind, using
-          eco-friendly materials that minimize environmental impact. Experience
-          the perfect blend of efficiency and care for the planet.
+          Nuestros invernaderos están diseñados pensando en la sostenibilidad,
+          utilizando materiales ecológicos que minimizan el impacto ambiental.
+          Experimenta la combinación perfecta entre eficiencia y respeto por el
+          planeta.
         </Typography>
       </Box>
 
@@ -98,11 +99,11 @@ function BenefitsGreenhouse() {
               fontWeight="bold"
               sx={{ mb: 2, color: "primary.dark" }}
             >
-              Eco-Friendly Materials
+              Materiales
             </Typography>
             <Typography variant="body1">
-              Our greenhouses use sustainable materials that reduce
-              environmental impact while maintaining durability.
+              “Materiales de alta gama que resisten cualquier clima. Elegimos lo
+              mejor para que tú no tengas que preocuparte.”
             </Typography>
           </Box>
           <Box
@@ -120,11 +121,12 @@ function BenefitsGreenhouse() {
               fontWeight="bold"
               sx={{ mb: 2, color: "primary.dark" }}
             >
-              Energy Efficient
+              Eficiencia energetica
             </Typography>
             <Typography variant="body1">
-              Designed to maximize natural light and heat retention, reducing
-              energy costs.
+              “Estructuras diseñadas para aprovechar cada rayo de luz y
+              optimizar la climatización. Aislación térmica avanzada: menos
+              gasto, más control.”
             </Typography>
           </Box>
         </Box>
@@ -169,11 +171,12 @@ function BenefitsGreenhouse() {
               fontWeight="bold"
               sx={{ mb: 2, color: "primary.dark" }}
             >
-              Advanced Technology
+              Tecnologia avabzada
             </Typography>
             <Typography variant="body1">
-              Smart climate control systems for optimal growing conditions
-              year-round.
+              “Invernaderos equipados con tecnología de última generación para
+              un control total del entorno. Sistemas inteligentes que
+              monitorizan, ajustan y optimizan cada variable del cultivo.”
             </Typography>
           </Box>
           <Box
@@ -194,8 +197,8 @@ function BenefitsGreenhouse() {
               Customizable
             </Typography>
             <Typography variant="body1">
-              Modular designs that can be adapted to your specific needs and
-              space.
+              &quot;Diseños modulares que pueden adaptarse a tus necesidades y
+              espacio específicos.&quot;
             </Typography>
           </Box>
         </Box>
@@ -219,16 +222,17 @@ function BenefitsGreenhouse() {
         <Typography
           variant="h5"
           sx={{
-            fontSize: { xs: "1.5rem", md: "1rem" },
+            fontSize: { xs: "1.5rem", md: "1.5rem" },
             color: "text.primary",
             textAlign: { xs: "center", sm: "left" },
           }}
         >
-          Ready to transform your growing experience? Lorem, ipsum dolor sit
-          amet consectetur adipisicing elit. Temporibus impedit consectetur quos
-          facilis reprehenderit quidem explicabo? Esse dicta laboriosam nostrum
-          unde doloribus, consectetur est quo perspiciatis facere,
-          necessitatibus amet sapiente.
+          Gracias a su estructura alta y ventilación natural eficiente, el
+          invernadero tipo capilla permite un excelente control del clima
+          interior. Esto se traduce en un ambiente óptimo para el cultivo
+          durante todo el año, maximizando la luz solar, reduciendo la
+          condensación y favoreciendo un crecimiento uniforme y saludable de los
+          cultivos.
         </Typography>
       </Box>
     </Box>

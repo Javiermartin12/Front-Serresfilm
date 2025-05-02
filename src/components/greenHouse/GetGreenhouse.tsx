@@ -63,7 +63,7 @@ function GetGreenhouse() {
             lineHeight: 1.2,
           }}
         >
-          Get Your Greenhouse Today!
+          Consigue tu invernadero hoy!
         </Typography>
         <Typography
           variant="body1"
@@ -74,7 +74,7 @@ function GetGreenhouse() {
             mb: { xs: 3, md: 0 },
           }}
         >
-          Contact us now for a personalized quote.
+          Contacta con nosotros para un prsupuesto personalizado!
         </Typography>
       </Box>
 
@@ -101,6 +101,7 @@ function GetGreenhouse() {
         <Button
           variant="contained"
           size="large"
+          href="tel:+34649961062"
           sx={{
             px: { xs: 3, md: 4 },
             py: 1.5,
@@ -116,29 +117,7 @@ function GetGreenhouse() {
             transition: "all 0.3s ease",
           }}
         >
-          Request
-        </Button>
-        <Button
-          variant="outlined"
-          size="large"
-          sx={{
-            px: { xs: 3, md: 4 },
-            py: 1.5,
-            fontSize: "1rem",
-            borderColor: "primary.main",
-            color: "primary.main",
-            minWidth: "120px",
-            "&:hover": {
-              borderColor: "primary.dark",
-              color: "primary.dark",
-              backgroundColor: "rgba(46, 125, 50, 0.04)",
-              transform: "translateY(-2px)",
-              boxShadow: 3,
-            },
-            transition: "all 0.3s ease",
-          }}
-        >
-          Inquire
+          Contacto
         </Button>
       </Box>
     </Box>

@@ -53,7 +53,7 @@ function InformationWarehouse() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, ease: "easeInOut" }}
         >
-          Invernaderos Tipo Capilla Cultivo Eficiente y Duradero
+          Almacenes Agrícolas
         </Typography>
 
         <Typography
@@ -67,10 +67,12 @@ function InformationWarehouse() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, ease: "easeInOut", delay: 0.2 }}
         >
-          &quot;Maximiza tu producción agrícola con nuestros invernaderos tipo
-          capilla, diseñados para ofrecer resistencia, climatización óptima y
-          alto rendimiento en cualquier temporada. ¡Ideales para pequeños y
-          medianos productores!&quot;
+          &quot;Diseñados para la eficiencia, la durabilidad y la sostenibilidad
+          Nuestros almacenes están concebidos para maximizar el espacio,
+          proteger la producción y mejorar los procesos logísticos dentro de la
+          finca. Gracias al uso de materiales de última generación, estas
+          estructuras resisten condiciones climáticas adversas y se adaptan a
+          las necesidades específicas de cada explotación.&quot;
         </Typography>
 
         {/* Características */}
@@ -83,19 +85,12 @@ function InformationWarehouse() {
         >
           {[
             {
-              title: "✔ Diseño duradero y resistente.",
-              desc: "Diseño en forma de arco que soporta vientos y lluvias intensas.",
-              desc2:
-                "✅ Control climático eficiente – Ventilación natural y distribución uniforme de temperatura.",
-              desc3:
-                "✅ Versatilidad de cultivo – Perfecto para hortalizas, flores y berries.",
-              desc4:
-                "✅ Materiales duraderos – Cubierta en policarbonato o plástico UV protegido.",
+              title: "✔ Estructura reforzada y personalizable",
+              desc: "Fabricados con perfiles, pilares rectangulares, cuadrados galvanizados, diseñados para una larga vida útil.",
             },
             {
-              title: "✔ Opciones de personalización.",
-              desc: "Adaptamos los invernaderos a tus necesidades.",
-              desc1: "✅ Fácil instalación – Adaptable a terrenos irregulares.",
+              title: "✔ Diseño funcional para múltiples usos",
+              desc: "Desde almacenaje de herramientas y productos agrícolas hasta zonas de trabajo o resguardo de maquinaria. Opcionalmente, pueden incluir sistemas de ventilación pasiva o automatizada, lo que garantiza una temperatura estable y adecuada durante todo el año.",
             },
           ].map((feature, index) => (
             <Box

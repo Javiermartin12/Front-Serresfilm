@@ -43,8 +43,9 @@ const GreenHouseHeader = () => {
           variant="h3"
           fontWeight="bold"
           fontSize={{ xs: "2rem", sm: "2.5rem", md: "3rem" }}
+          sx={{ color: "darkgreen" }}
         >
-          Invernaderos de Alta Tecnología
+          Invernaderos Serresfilm
         </Typography>
         <Typography
           variant="body1"
