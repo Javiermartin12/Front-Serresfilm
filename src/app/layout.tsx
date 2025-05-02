@@ -1,22 +1,19 @@
-"use client";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-
-import theme from "@/styles/theme";
-import { CssBaseline, ThemeProvider } from "@mui/material";
+import ClientProvider from "./client-provider";
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  console.log("children", children);
   return (
     <html lang="en">
       <body>
-        <ThemeProvider theme={theme}>
-          <CssBaseline></CssBaseline>
+        <ClientProvider>
           {children}
-        </ThemeProvider>
-        <SpeedInsights />
+          <SpeedInsights />
+        </ClientProvider>
       </body>
     </html>
   );
