@@ -79,9 +79,35 @@ const MachineryHeader = () => {
           justifyContent: "center",
         }}
       >
-        <Typography variant="h4" fontWeight="bold" textAlign="center">
-          Machinery & Equipment
-        </Typography>
+        <Box
+          sx={{
+            width: "90%",
+            maxWidth: "800px", // Limita el ancho máximo del texto en pantallas grandes
+            height: { xs: "50%", sm: "40%" }, // Ajuste para responsividad
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            textAlign: "center",
+            paddingTop: 8,
+          }}
+        >
+          <Typography
+            variant="h3"
+            fontWeight="bold"
+            fontSize={{ xs: "2rem", sm: "2.5rem", md: "3rem" }}
+            sx={{ color: "darkgreen" }}
+          >
+            Maquinaria y Equipo
+          </Typography>
+          <Typography
+            variant="body1"
+            sx={{ marginTop: 2, fontSize: { xs: "1rem", md: "1.2rem" } }}
+          >
+            Nuestra maquinaria están diseñados para maximizar la utilidad y la
+            eficiencia en el trabajo.
+          </Typography>
+        </Box>
       </Box>
 
       {/* Sección de imágenes en movimiento */}
