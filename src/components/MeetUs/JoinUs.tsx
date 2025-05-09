@@ -1,65 +1,52 @@
 "use client";
-import { Box, Button, TextField, Typography } from "@mui/material";
-import React, { useState } from "react";
+
+import { Box, Typography } from "@mui/material";
+import React from "react";
 
 const JoinUs: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    cvLink: "",
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-  };
-
   return (
     <Box
       sx={{
+        m: 4,
         textAlign: "center",
         p: { xs: 2, sm: 3, md: 4 },
-        maxWidth: { xs: "90%", sm: 500 },
+        maxWidth: 500,
         mx: "auto",
+        backgroundColor: "#fff",
+        borderRadius: 2,
+        boxShadow: "0 8px 24px rgba(0,0,0,0.1)",
       }}
     >
       <Typography variant="h5" fontWeight="bold" gutterBottom>
         ¿Quieres unirte a nosotros?
       </Typography>
-      <Typography variant="body1" color="textSecondary" gutterBottom>
-        Envíanos tu CV y nos pondremos en contacto contigo.
-      </Typography>
+
       <Box
         component="form"
-        onSubmit={handleSubmit}
         sx={{
-          mt: 2,
+          mt: 3,
           display: "flex",
           flexDirection: "column",
-
           gap: 2,
         }}
-      >
-        <TextField
-          name="cvLink"
-          type="file"
-          value={formData.cvLink}
-          onChange={handleChange}
-          required
-          fullWidth
-        />
-        <Button
-          type="submit"
-          variant="contained"
-          color="primary"
-          sx={{ width: "100%" }}
-        >
-          Enviar
-        </Button>
+      ></Box>
+
+      {/* Enlace directo a correo */}
+      <Box mt={1}>
+        <Typography variant="body1" color="text.secondary">
+          Puedes enviarnos un correo a{" "}
+          <Box
+            component="a"
+            href="mailto:jmmserres@gmail.com"
+            sx={{
+              color: "primary.main",
+              fontWeight: 600,
+              textDecoration: "none",
+            }}
+          >
+            ejemplo@gmail.com
+          </Box>
+        </Typography>
       </Box>
     </Box>
   );

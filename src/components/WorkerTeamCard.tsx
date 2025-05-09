@@ -1,4 +1,4 @@
-import { Box, SxProps, Theme, Typography } from "@mui/material";
+import { Box, Typography, useTheme, SxProps, Theme } from "@mui/material";
 import React from "react";
 
 interface WorkerTeamCardProps {
@@ -16,47 +16,58 @@ const WorkerTeamCard: React.FC<WorkerTeamCardProps> = ({
   job,
   description,
 }) => {
+  const theme = useTheme();
+
   return (
     <Box
       sx={{
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        justifyContent: "center",
-        border: "1px solid black",
-        padding: 2,
-        boxShadow: 3,
-        borderRadius: 2,
-        height: { xs: 300, xl: 500 },
-        width: { xs: 300, sm: 200, xl: 300 },
         textAlign: "center",
-        backgroundColor: "#fff",
-        gap: 2, // Mueve gap aquí para evitar sobrescribir sx
+        p: 3,
+        borderRadius: 4,
+        backgroundColor: theme.palette.background.paper,
+        boxShadow: "0 8px 24px rgba(0, 0, 0, 0.1)",
+        transition: "transform 0.3s, box-shadow 0.3s",
+        "&:hover": {
+          transform: "translateY(-8px)",
+          boxShadow: "0 12px 30px rgba(0, 0, 0, 0.15)",
+        },
+        maxWidth: 320,
+        height: "100%",
+        mx: "auto",
         ...sx,
       }}
     >
-      {/* Imagen de avatar */}
       <Box
         component="img"
         src={avatar}
         alt={name}
         sx={{
-          width: 60,
-          height: 60,
-          mb: 1,
+          width: 96,
+          height: 96,
           borderRadius: "50%",
-          border: "1px solid black",
           objectFit: "cover",
+          boxShadow: "0 4px 10px rgba(0, 0, 0, 0.2)",
+          border: `3px solid ${theme.palette.primary.main}`,
+          mb: 2,
         }}
       />
-
-      <Typography variant="h5" fontWeight="bold">
+      <Typography variant="h6" fontWeight={700} gutterBottom>
         {name}
       </Typography>
-      <Typography variant="subtitle1" color="text.secondary">
+      <Typography
+        variant="subtitle2"
+        color="primary"
+        fontWeight={600}
+        gutterBottom
+      >
         {job}
       </Typography>
-      <Typography variant="body2">{description}</Typography>
+      <Typography variant="body2" color="text.secondary">
+        {description}
+      </Typography>
     </Box>
   );
 };

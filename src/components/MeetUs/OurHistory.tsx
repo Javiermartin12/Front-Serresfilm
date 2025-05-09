@@ -2,10 +2,8 @@ import {
   Box,
   Typography,
   Container,
-  Grid,
   useTheme,
   useMediaQuery,
-  Button,
   Grow,
 } from "@mui/material";
 import React, { useState, useEffect } from "react";
@@ -32,9 +30,8 @@ const OurHistory = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const controls = useAnimation();
   const [hovered, setHovered] = useState(false);
-
-  // Efecto parallax para la imagen
   const [offsetY, setOffsetY] = useState(0);
+
   const handleScroll = () => setOffsetY(window.pageYOffset);
 
   useEffect(() => {
@@ -47,7 +44,7 @@ const OurHistory = () => {
       component="section"
       aria-labelledby="our-history-heading"
       sx={{
-        py: { xs: 8, md: 12 },
+        py: { xs: 10, md: 16 },
         bgcolor: "background.default",
         position: "relative",
         overflow: "hidden",
@@ -69,138 +66,87 @@ const OurHistory = () => {
           threshold={0.2}
           onChange={(inView) => inView && controls.start("visible")}
         >
-          <Grid
-            container
-            spacing={{ xs: 4, md: 8 }}
-            alignItems="center"
-            direction={isMobile ? "column-reverse" : "row"}
-            sx={{ position: "relative", zIndex: 1 }}
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: { xs: "column-reverse", md: "row" },
+
+              gap: { xs: 4, md: 8 },
+              position: "relative",
+              zIndex: 1,
+            }}
           >
             {/* Texto con animaciones */}
-            <Grid item xs={12} md={6}>
-              <Box sx={{ pr: { md: 4 } }}>
+            <Box sx={{ flex: 1, pr: { md: 4 } }}>
+              <Typography
+                variant={isMobile ? "h4" : "h3"}
+                fontWeight="bold"
+                gutterBottom
+                id="our-history-heading"
+                sx={{
+                  color: "primary.main",
+                  position: "relative",
+                  mb: 4,
+                  "&:after": {
+                    content: '""',
+                    display: "block",
+                    width: "100px",
+                    height: "4px",
+                    backgroundColor: "secondary.main",
+                    mt: 2,
+                    transformOrigin: "left",
+                    transform: hovered ? "scaleX(1.2)" : "scaleX(1)",
+                    transition: "transform 0.3s ease",
+                  },
+                }}
+                onMouseEnter={() => setHovered(true)}
+                onMouseLeave={() => setHovered(false)}
+              >
+                <AnimatedText>Nuestra Historia</AnimatedText>
+              </Typography>
+
+              <AnimatedText delay={0.2}>
                 <Typography
-                  variant={isMobile ? "h4" : "h3"}
-                  fontWeight="bold"
-                  gutterBottom
-                  id="our-history-heading"
+                  variant="body1"
+                  color="text.secondary"
+                  paragraph
                   sx={{
-                    color: "primary.main",
-                    position: "relative",
-                    mb: 4,
-                    "&:after": {
-                      content: '""',
-                      display: "block",
-                      width: "100px",
-                      height: "4px",
-                      backgroundColor: "secondary.main",
-                      mt: 2,
-                      transformOrigin: "left",
-                      transform: hovered ? "scaleX(1.2)" : "scaleX(1)",
-                      transition: "transform 0.3s ease",
-                    },
+                    lineHeight: 1.8,
+                    fontSize: { xs: "1rem", md: "1.25rem" },
+                    mb: 3,
                   }}
-                  onMouseEnter={() => setHovered(true)}
-                  onMouseLeave={() => setHovered(false)}
                 >
-                  <AnimatedText>Nuestra Historia</AnimatedText>
+                  Serresfilm S.L. nace en el año 2013 de la mano de Jesús Martín
+                  Martín, un emprendedor con más de dos décadas de experiencia
+                  en el sector agrícola. Tras verse obligado a abandonar su
+                  anterior empresa por la crisis económica de 2010, Jesús decide
+                  apostar por un nuevo comienzo. Así surge Serresfilm, una
+                  empresa familiar que desde el principio ha mantenido intactos
+                  sus valores de calidad, cercanía y trato humano. Los inicios
+                  fueron humildes: una nave de 200 m² en El Ejido (Almería),
+                  donde se retomó la fabricación y venta de invernaderos y naves
+                  agrícolas, productos que Jesús ya conocía a fondo desde 1995.
+                  Gracias al esfuerzo constante y al compromiso con nuestros
+                  clientes —mayoritariamente agricultores—, la empresa ha
+                  experimentado un crecimiento sostenido hasta contar hoy con
+                  2.500 m² de infraestructura propia. En 2015, dimos un paso más
+                  incorporando la fabricación de maquinaria agrícola, una línea
+                  que actualmente representa uno de los pilares más sólidos de
+                  Serresfilm. A lo largo de estos años hemos tenido el
+                  privilegio de participar en proyectos tanto nacionales como
+                  internacionales, destacando el diseño, venta y montaje de
+                  invernaderos en España, Dubái y Catar. Hoy, Serresfilm
+                  continúa creciendo con la misma filosofía que la vio nacer:
+                  trabajar con pasión, mantener una relación cercana con cada
+                  cliente y ofrecer siempre un producto de máxima calidad
+                  adaptado a las necesidades del campo actual.
+                  {/* Texto truncado por brevedad */}
                 </Typography>
-
-                <AnimatedText delay={0.2}>
-                  <Typography
-                    variant="body1"
-                    color="text.secondary"
-                    paragraph
-                    sx={{
-                      lineHeight: 1.8,
-                      fontSize: { xs: "1rem", md: "1.1rem" },
-                      mb: 3,
-                    }}
-                  >
-                    Fundada en{" "}
-                    <Box
-                      component="span"
-                      sx={{ color: "primary.main", fontWeight: 600 }}
-                    >
-                      1995
-                    </Box>
-                    , nuestra empresa ha crecido hasta convertirse en líder del
-                    sector con presencia en 12 países. Desde nuestros inicios,
-                    hemos revolucionado el mercado con innovación y calidad
-                    excepcional.
-                  </Typography>
-                </AnimatedText>
-
-                <AnimatedText delay={0.4}>
-                  <Typography
-                    variant="body1"
-                    color="text.secondary"
-                    paragraph
-                    sx={{
-                      lineHeight: 1.8,
-                      fontSize: { xs: "1rem", md: "1.1rem" },
-                      mb: 4,
-                    }}
-                  >
-                    Con más de{" "}
-                    <Box
-                      component="span"
-                      sx={{ color: "primary.main", fontWeight: 600 }}
-                    >
-                      25 años
-                    </Box>{" "}
-                    de experiencia, nuestro equipo de 150+ expertos desarrolla
-                    soluciones personalizadas que han beneficiado a más de 5,000
-                    clientes satisfechos en todo el mundo.
-                  </Typography>
-                </AnimatedText>
-
-                <AnimatedText delay={0.6}>
-                  <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
-                    <Button
-                      variant="contained"
-                      color="primary"
-                      size={isMobile ? "medium" : "large"}
-                      sx={{
-                        fontWeight: "bold",
-                        px: 4,
-                        py: 1.5,
-                        borderRadius: "8px",
-                        boxShadow: theme.shadows[4],
-                        "&:hover": {
-                          boxShadow: theme.shadows[8],
-                          transform: "translateY(-2px)",
-                        },
-                        transition: "all 0.3s ease",
-                      }}
-                    >
-                      Conoce nuestro equipo
-                    </Button>
-                    <Button
-                      variant="outlined"
-                      color="secondary"
-                      size={isMobile ? "medium" : "large"}
-                      sx={{
-                        fontWeight: "bold",
-                        px: 4,
-                        py: 1.5,
-                        borderRadius: "8px",
-                        "&:hover": {
-                          bgcolor: "secondary.light",
-                          color: "white",
-                        },
-                        transition: "all 0.3s ease",
-                      }}
-                    >
-                      Ver línea de tiempo
-                    </Button>
-                  </Box>
-                </AnimatedText>
-              </Box>
-            </Grid>
+              </AnimatedText>
+            </Box>
 
             {/* Imagen con efectos */}
-            <Grid item xs={12} md={6}>
+            <Box sx={{ flex: 1 }}>
               <Grow in timeout={800}>
                 <Box
                   sx={{
@@ -227,8 +173,8 @@ const OurHistory = () => {
                 >
                   <Box
                     component="img"
-                    src="/images/about/history.jpg" // Ruta optimizada para Next.js
-                    alt="Equipo fundador de la empresa en sus primeras instalaciones en 1995"
+                    src="https://res.cloudinary.com/dd5zkfvbo/image/upload/v1746540394/Invernaderos/fdmcydfvbr8qfwwmijbx.jpg"
+                    alt="Invernaderos en Almería"
                     loading="lazy"
                     sx={{
                       width: "100%",
@@ -241,25 +187,23 @@ const OurHistory = () => {
                   />
                   <Box
                     sx={{
-                      position: "absolute",
-                      bottom: 0,
-                      left: 0,
-                      p: 3,
                       zIndex: 2,
                       color: "white",
                       width: "100%",
                       background:
-                        "linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%)",
+                        "linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.2) 100%)",
+                      px: 2,
+                      py: 1,
                     }}
                   >
                     <Typography variant="caption" sx={{ opacity: 0.8 }}>
-                      Nuestro primer taller en Barcelona, 1995
+                      Campo de Almería, 1995
                     </Typography>
                   </Box>
                 </Box>
               </Grow>
-            </Grid>
-          </Grid>
+            </Box>
+          </Box>
         </InView>
       </Container>
     </Box>

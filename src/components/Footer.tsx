@@ -31,6 +31,33 @@ const socialLinks = [
   },
 ];
 
+const footerLinks = [
+  {
+    title: "Productos",
+    links: [
+      { label: "Invernaderos", href: "/greenHouse" },
+      { label: "Almacenes", href: "/wareHouse" },
+      { label: "Maquinaria", href: "/machinery" },
+    ],
+  },
+  {
+    title: "Soporte",
+    links: [
+      { label: "Contacto", href: "/contact" },
+      { label: "Conócenos", href: "/about" },
+      { label: "Garantías", href: "/garantia" },
+    ],
+  },
+  {
+    title: "Legal",
+    links: [
+      { label: "Política de privacidad", href: "/privacyPolicy" },
+      { label: "Aviso legal", href: "/legalNotice" },
+      { label: "Cookies", href: "/cookiesPolicy" },
+    ],
+  },
+];
+
 const Footer = () => {
   return (
     <Box
@@ -53,17 +80,10 @@ const Footer = () => {
         },
       }}
     >
-      {/* Efecto de hojas decorativas */}
       <Box
         component={motion.div}
-        animate={{
-          rotate: [0, 5, 0],
-        }}
-        transition={{
-          duration: 8,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
+        animate={{ rotate: [0, 5, 0] }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
         sx={{
           position: "absolute",
           right: "5%",
@@ -77,7 +97,6 @@ const Footer = () => {
         🌿
       </Box>
 
-      {/* Contenedor principal */}
       <Box
         sx={{
           maxWidth: "1400px",
@@ -93,29 +112,21 @@ const Footer = () => {
           zIndex: 1,
         }}
       >
-        {/* Sección de contacto */}
+        {/* Contacto */}
         <Box
           component={motion.div}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          sx={{
-            gridColumn: { xs: "1", sm: "1 / span 2", md: "1" },
-          }}
+          sx={{ gridColumn: { xs: "1", sm: "1 / span 2", md: "1" } }}
         >
           <Typography
             variant="h4"
             component="h2"
             color="primary.main"
             gutterBottom
-            sx={{
-              fontWeight: "bold",
-              mb: 3,
-              display: "flex",
-              alignItems: "center",
-              gap: 1,
-            }}
+            sx={{ fontWeight: "bold", mb: 3, display: "flex", gap: 1 }}
           >
             <Box
               component="span"
@@ -184,6 +195,9 @@ const Footer = () => {
             <Button
               variant="outlined"
               size="small"
+              href="https://maps.app.goo.gl/YGA8LKCkJMaHGgH96"
+              target="_blank"
+              rel="noopener noreferrer"
               sx={{
                 mt: 2,
                 alignSelf: "flex-start",
@@ -200,36 +214,8 @@ const Footer = () => {
           </Stack>
         </Box>
 
-        {/* Secciones de enlaces */}
-        {[
-          {
-            title: "Productos",
-            links: [
-              "Invernaderos",
-              "Cubiertas",
-              "Sistemas de riego",
-              "Control climático",
-            ],
-          },
-          {
-            title: "Soporte",
-            links: [
-              "Preguntas frecuentes",
-              "Guías de instalación",
-              "Garantías",
-              "Contactar soporte",
-            ],
-          },
-          {
-            title: "Legal",
-            links: [
-              "Política de privacidad",
-              "Términos de servicio",
-              "Aviso legal",
-              "Cookies",
-            ],
-          },
-        ].map((section, index) => (
+        {/* Enlaces del footer */}
+        {footerLinks.map((section, index) => (
           <Box
             key={index}
             component={motion.div}
@@ -266,7 +252,7 @@ const Footer = () => {
               {section.links.map((link, i) => (
                 <Link
                   key={i}
-                  href="#"
+                  href={link.href}
                   component={motion.a}
                   whileHover={{ x: 5 }}
                   sx={{
@@ -279,7 +265,7 @@ const Footer = () => {
                     transition: "all 0.2s ease",
                   }}
                 >
-                  {link}
+                  {link.label}
                 </Link>
               ))}
             </Stack>
