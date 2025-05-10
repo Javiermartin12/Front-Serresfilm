@@ -45,7 +45,6 @@ const footerLinks = [
     links: [
       { label: "Contacto", href: "/contact" },
       { label: "Conócenos", href: "/about" },
-      { label: "Garantías", href: "/garantia" },
     ],
   },
   {
@@ -128,15 +127,6 @@ const Footer = () => {
             gutterBottom
             sx={{ fontWeight: "bold", mb: 3, display: "flex", gap: 1 }}
           >
-            <Box
-              component="span"
-              sx={{
-                width: "40px",
-                height: "4px",
-                backgroundColor: "primary.main",
-                display: "inline-block",
-              }}
-            />
             Serresfilm SL
           </Typography>
 
@@ -195,7 +185,7 @@ const Footer = () => {
             <Button
               variant="outlined"
               size="small"
-              href="https://maps.app.goo.gl/YGA8LKCkJMaHGgH96"
+              href="https://www.google.com/maps/place/C.+XII,+41,+04710+El+Ejido,+Almer%C3%ADa/@36.7867406,-2.7476513,186m/data=!3m2!1e3!4b1!4m6!3m5!1s0xd70684ee93a8f71:0x7b4a12c2baafed23!8m2!3d36.7867406!4d-2.7470076!16s%2Fg%2F11c5npjkqp?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoASAFQAw%3D%3D"
               target="_blank"
               rel="noopener noreferrer"
               sx={{
