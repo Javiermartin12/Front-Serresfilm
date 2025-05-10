@@ -44,7 +44,7 @@ const JoinUs: React.FC = () => {
               textDecoration: "none",
             }}
           >
-            ejemplo@gmail.com
+            jmmserres@gmail.com
           </Box>
         </Typography>
       </Box>

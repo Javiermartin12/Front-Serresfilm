@@ -15,6 +15,7 @@ const ScreenshotPlace = () => {
         maxWidth: 900,
         mx: "auto",
         mt: 6,
+        mb: 6,
       }}
     >
       <Typography variant="h4" fontWeight="bold" gutterBottom>
@@ -37,14 +38,13 @@ const ScreenshotPlace = () => {
       >
         <iframe
           title="Ubicación de la empresa"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3171.788285863803!2d-2.8082193846648646!3d36.77726267995802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd7073d1661fa71f%3A0x7031d9c3a1912ad5!2sEl%20Ejido%2C%20Almer%C3%ADa!5e0!3m2!1ses!2ses!4v1689946791902!5m2!1ses!2ses"
+          src="https://maps.google.com/maps?q=Calle%20XII%2041%20El%20Ejido&t=&z=17&ie=UTF8&iwloc=&output=embed"
           width="100%"
           height="100%"
           style={{ border: 0 }}
-          loading="lazy"
           allowFullScreen
-          referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
+          loading="lazy"
+        />
       </Box>
 
       <Box mt={4}>
